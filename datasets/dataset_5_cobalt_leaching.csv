@@ -1,0 +1,13 @@
+processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status
+Cobalt Acid Leach - Tank 1,0.45,85,2.5,10,84.2,77.5,235,580,280,1420,Alert
+Cobalt Acid Leach - Tank 2,0.52,88,2.6,9,87.8,81.3,210,540,275,1395,Warning
+Cobalt Acid Leach - Tank 3,0.60,92,2.8,8,91.5,85.7,185,490,268,1360,Optimal
+Cobalt Acid Leach - Tank 4,0.48,86,2.5,10,85.9,79.1,225,565,278,1410,Warning
+Cobalt Acid Leach - Tank 5,0.55,90,2.7,8.5,89.3,83.2,198,520,272,1380,Optimal
+Cobalt Acid Leach - Tank 6,0.42,82,2.4,11,82.1,75.4,248,610,285,1445,Alert
+Cobalt Acid Leach - Tank 7,0.58,91,2.7,8,90.8,84.5,190,505,270,1370,Optimal
+Cobalt Acid Leach - Tank 8,0.50,87,2.6,9.5,86.5,80.2,218,555,276,1400,Warning
+Cobalt Acid Leach - Tank 9,0.65,95,2.9,7,93.2,87.9,170,465,262,1330,Optimal
+Cobalt Acid Leach - Tank 10,0.40,80,2.3,12,80.5,73.8,260,635,290,1470,Alert
+Cobalt Acid Leach - Tank 11,0.53,89,2.6,9,88.1,81.8,205,535,274,1390,Warning
+Cobalt Acid Leach - Tank 12,0.62,93,2.8,7.5,92.0,86.3,178,480,265,1345,Optimal

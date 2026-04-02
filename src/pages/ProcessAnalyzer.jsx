@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { getProcessOptimization } from '../services/openRouterService';
 import { Loader, Send } from 'lucide-react';
 
@@ -81,7 +81,7 @@ const ProcessAnalyzer = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Temperature (°C)
+                  Temperature (C)
                 </label>
                 <input
                   type="number"

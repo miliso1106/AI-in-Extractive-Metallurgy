@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+WarningProcess5,2.0,65,2.0,10,89.0,82.0,180,600,280,1400,Warning,2024-01-15 10:30

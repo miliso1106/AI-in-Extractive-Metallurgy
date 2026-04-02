@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Nickel Laterite HPAL,1.3,250,40,2,93.5,88.5,240,700,500,2200,Optimal,2024-01-15 10:30

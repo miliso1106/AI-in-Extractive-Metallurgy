@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Lead Smelting,4.3,1100,2.8,6,83,75,250,600,400,2000,Alert,2024-01-15 10:30

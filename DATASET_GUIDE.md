@@ -1,4 +1,4 @@
-# 📊 Dataset Management Guide
+﻿# ðŸ“Š Dataset Management Guide
 
 ## Overview
 
@@ -11,7 +11,7 @@ Your AI Metallurgy Dashboard now includes a complete dataset management system w
 
 ---
 
-## 📁 Dataset Structure
+## ðŸ“ Dataset Structure
 
 ### Location
 ```
@@ -44,64 +44,64 @@ src/data/processData.json
 
 ---
 
-## 📋 Field Descriptions
+## ðŸ“‹ Field Descriptions
 
 | Field | Type | Unit | Description |
 |-------|------|------|-------------|
 | **id** | Integer | - | Unique process identifier |
 | **processName** | String | - | Name of extraction process |
 | **oreGrade** | Float | % | Metal content percentage in ore |
-| **temperature** | Integer | °C | Operating temperature |
+| **temperature** | Integer |  C | Operating temperature |
 | **pressure** | Float | atm | Operating pressure (atmospheres) |
 | **leachingTime** | Integer | hours | Duration of leaching/processing |
 | **recoveryRate** | Float | % | % of metal successfully extracted |
 | **efficiency** | Float | % | Overall process efficiency |
 | **wasteGenerated** | Integer | tons/day | Daily waste production |
-| **waterUsage** | Integer | m³/day | Daily water consumption |
+| **waterUsage** | Integer |  m3/day | Daily water consumption |
 | **energyConsumption** | Integer | MWh/day | Daily energy usage |
-| **co2Emissions** | Integer | kg/day | Daily CO₂ emissions |
+| **co2Emissions** | Integer | kg/day | Daily CO2‚ emissions |
 | **status** | String | - | Optimal / Warning / Alert |
 | **timestamp** | String | - | Data collection timestamp |
 
 ---
 
-## 🎯 Sample Processes Included
+## ðŸŽ¯ Sample Processes Included
 
 ### 1. Copper Leaching
-- Ore Grade: 2.5% | Recovery: 94.2% | Efficiency: 87.3% | Status: ✓ Optimal
+- Ore Grade: 2.5% | Recovery: 94.2% | Efficiency: 87.3% | Status: OK Optimal
 
 ### 2. Gold Cyanidation
-- Ore Grade: 5.2% | Recovery: 91.5% | Efficiency: 84.2% | Status: ✓ Optimal
+- Ore Grade: 5.2% | Recovery: 91.5% | Efficiency: 84.2% | Status: OK Optimal
 
 ### 3. Silver Leaching
-- Ore Grade: 3.8% | Recovery: 89.3% | Efficiency: 81.5% | Status: ⚠ Warning
+- Ore Grade: 3.8% | Recovery: 89.3% | Efficiency: 81.5% | Status: Warning Warning
 
 ### 4. Zinc Roasting
-- Ore Grade: 6.1% | Recovery: 93.1% | Efficiency: 88.9% | Status: ✓ Optimal
+- Ore Grade: 6.1% | Recovery: 93.1% | Efficiency: 88.9% | Status: OK Optimal
 
 ### 5. Lead Smelting
-- Ore Grade: 4.3% | Recovery: 88.7% | Efficiency: 79.2% | Status: ✕ Alert
+- Ore Grade: 4.3% | Recovery: 88.7% | Efficiency: 79.2% | Status: Alert Alert
 
 ### 6. Nickel Laterite
-- Ore Grade: 1.8% | Recovery: 85.4% | Efficiency: 76.1% | Status: ✕ Alert
+- Ore Grade: 1.8% | Recovery: 85.4% | Efficiency: 76.1% | Status: Alert Alert
 
 ### 7. Copper Flotation
-- Ore Grade: 1.2% | Recovery: 92.8% | Efficiency: 86.5% | Status: ✓ Optimal
+- Ore Grade: 1.2% | Recovery: 92.8% | Efficiency: 86.5% | Status: OK Optimal
 
 ### 8. Aluminum Bauxite
-- Ore Grade: 45.0% | Recovery: 96.2% | Efficiency: 91.8% | Status: ✓ Optimal
+- Ore Grade: 45.0% | Recovery: 96.2% | Efficiency: 91.8% | Status: OK Optimal
 
 ### 9. Iron Magnetite
-- Ore Grade: 65.0% | Recovery: 94.5% | Efficiency: 89.3% | Status: ✓ Optimal
+- Ore Grade: 65.0% | Recovery: 94.5% | Efficiency: 89.3% | Status: OK Optimal
 
 ### 10. Cobalt Leaching
-- Ore Grade: 0.5% | Recovery: 87.9% | Efficiency: 80.4% | Status: ⚠ Warning
+- Ore Grade: 0.5% | Recovery: 87.9% | Efficiency: 80.4% | Status: Warning Warning
 
 ---
 
-## 🎛️ Dashboard Features
+## ðŸŽ›ï¸ Dashboard Features
 
-### 📊 Process Data Page
+### ðŸ“Š Process Data Page
 
 **Location:** Database icon in navigation menu
 
@@ -110,7 +110,7 @@ src/data/processData.json
    - Total number of processes
    - Average recovery rate
    - Average efficiency
-   - Total CO₂ emissions
+   - Total CO2‚ emissions
 
 2. **Status Overview**
    - Count of Optimal processes
@@ -136,7 +136,7 @@ src/data/processData.json
 
 ---
 
-## 🔍 How to Use the Table
+## ðŸ” How to Use the Table
 
 ### Sorting
 - Click any column header to sort ascending/descending
@@ -160,11 +160,11 @@ Each filter/search shows:
 - Number of matching processes
 - Average recovery rate
 - Average efficiency
-- Total CO₂ emissions for selected processes
+- Total CO2‚ emissions for selected processes
 
 ---
 
-## 📤 Exporting Data
+## ðŸ“¤ Exporting Data
 
 ### CSV Export
 1. Go to "Process Data" page
@@ -190,7 +190,7 @@ All 15 fields are exported:
 
 ---
 
-## 📈 Dashboard Data Preview
+## ðŸ“ˆ Dashboard Data Preview
 
 ### Dashboard Tab
 The Dashboard home page includes:
@@ -207,7 +207,7 @@ The Dashboard home page includes:
 
 ---
 
-## 🔄 How to Update the Dataset
+## ðŸ”„ How to Update the Dataset
 
 ### Method 1: Edit JSON File Directly
 1. Open `src/data/processData.json`
@@ -243,32 +243,32 @@ The Dashboard home page includes:
 
 ---
 
-## 📊 Status Calculation Logic
+## ðŸ“Š Status Calculation Logic
 
 ### Optimal
 ```
 - Efficiency > 85%
 - Recovery Rate > 90%
-- CO₂ Emissions < 1500 kg/day
+- CO2‚ Emissions < 1500 kg/day
 ```
 
 ### Warning
 ```
 - Efficiency 80-85%
 - Recovery Rate 85-90%
-- CO₂ Emissions 1500-2000 kg/day
+- CO2‚ Emissions 1500-2000 kg/day
 ```
 
 ### Alert
 ```
 - Efficiency < 80%
 - Recovery Rate < 85%
-- CO₂ Emissions > 2000 kg/day
+- CO2‚ Emissions > 2000 kg/day
 ```
 
 ---
 
-## 📝 Real-World Application
+## ðŸ“ Real-World Application
 
 ### Using with Your Report
 
@@ -279,7 +279,7 @@ Include in your handwritten report:
    - Efficiency trends
 
 2. **Environmental Impact**
-   - CO₂ emissions by process
+   - CO2‚ emissions by process
    - Waste generation analysis
    - Water usage comparison
 
@@ -295,7 +295,7 @@ Include in your handwritten report:
 
 ---
 
-## 🔧 Customization Options
+## ðŸ”§ Customization Options
 
 ### Add More Processes
 1. Open `processData.json`
@@ -323,7 +323,7 @@ Edit `src/pages/ProcessDataPage.jsx`:
 
 ---
 
-## 💡 Analysis Ideas for Your Report
+## ðŸ’¡ Analysis Ideas for Your Report
 
 ### 1. Process Efficiency Analysis
 - What are the most efficient processes?
@@ -331,7 +331,7 @@ Edit `src/pages/ProcessDataPage.jsx`:
 - Correlation between parameters and efficiency
 
 ### 2. Environmental Impact
-- CO₂ emissions by process type
+- CO2‚ emissions by process type
 - Water usage optimization opportunities
 - Waste reduction strategies
 
@@ -347,7 +347,7 @@ Edit `src/pages/ProcessDataPage.jsx`:
 
 ---
 
-## 🚀 Getting Started
+## ðŸš€ Getting Started
 
 ### Quick Start
 1. Open application at `http://localhost:3000`
@@ -373,7 +373,7 @@ The data works with other dashboard features:
 
 ---
 
-## 📚 Advanced Features
+## ðŸ“š Advanced Features
 
 ### Real-Time Updates
 Future enhancement: Connect to live data sources
@@ -395,7 +395,7 @@ Future enhancement: ML-powered predictions
 
 ---
 
-## 🐛 Troubleshooting
+## ðŸ› Troubleshooting
 
 ### Data Not Showing
 - Check file location: `src/data/processData.json`
@@ -414,7 +414,7 @@ Future enhancement: ML-powered predictions
 
 ---
 
-## 📞 Support
+## ðŸ“ž Support
 
 For help with:
 - **Data structure:** See Field Descriptions above
@@ -424,26 +424,26 @@ For help with:
 
 ---
 
-## 📋 Checklist for Using This Feature
+## ðŸ“‹ Checklist for Using This Feature
 
-✅ **Setup**
+âœ… **Setup**
 - [ ] Open Process Data page
 - [ ] Verify all 10 processes load
 - [ ] Check statistics display correctly
 
-✅ **Testing**
+âœ… **Testing**
 - [ ] Sort by different columns
 - [ ] Search for specific process
 - [ ] Filter by status
 - [ ] Export to CSV
 
-✅ **For Your Report**
+âœ… **For Your Report**
 - [ ] Take screenshots of table
 - [ ] Document findings
 - [ ] Include in environmental analysis
 - [ ] Add recommendations
 
-✅ **Presentation**
+âœ… **Presentation**
 - [ ] Show data loading on dashboard
 - [ ] Demonstrate filtering/sorting
 - [ ] Export CSV live demo
@@ -455,3 +455,42 @@ For help with:
 **Dataset Version:** 1.0
 **Number of Processes:** 10 samples
 **Total Data Points:** 150+ fields
+
+
+---
+
+## CSV Upload and AI Insights
+
+You can now upload your own CSV file and generate an AI insights table.
+
+### Upload CSV
+1. Open the "Process Data" page.
+2. Click "Upload CSV" and select your file.
+3. The table will refresh with your uploaded data.
+
+### Required Columns (for the advanced table)
+At minimum, include:
+- processName
+- recoveryRate
+- efficiency
+
+Recommended full set:
+- id
+- processName
+- oreGrade
+- temperature
+- pressure
+- leachingTime
+- recoveryRate
+- efficiency
+- wasteGenerated
+- waterUsage
+- energyConsumption
+- co2Emissions
+- status
+- timestamp
+
+### AI Insights Table
+1. Provide a short focus question (example: "Copper slag contains gold and silver. Suggest recovery steps and efficiency improvements.").
+2. Click "Analyze Dataset with AI".
+3. The AI returns a compact table of key issues, actions, and expected efficiency gains.

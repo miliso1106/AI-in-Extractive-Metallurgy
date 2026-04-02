@@ -20,7 +20,7 @@ function App() {
       case 'data':
         return <ProcessDataPage />;
       default:
-        return <Dashboard />;
+        return <Dashboard setCurrentPage={setCurrentPage} />;
     }
   };
 

@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Aluminum Bauxite,45.0,150,5.0,8,88,82,80,200,280,1400,Warning,2024-01-15 10:30

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { predictRecoveryRate } from '../services/openRouterService';
-import { Loader, Send, TrendingUp } from 'lucide-react';
+import { Loader, TrendingUp } from 'lucide-react';
 
 const RecoveryPrediction = () => {
   const [formData, setFormData] = useState({
@@ -85,7 +85,7 @@ const RecoveryPrediction = () => {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Temperature (°C)
+                  Temperature (C)
                 </label>
                 <input
                   type="number"
@@ -162,8 +162,14 @@ const RecoveryPrediction = () => {
                 <div className="bg-gradient-to-r from-green-900 to-green-800 p-6 rounded-lg border border-green-700">
                   <p className="text-sm text-green-200 mb-2">Predicted Recovery Rate</p>
                   <p className="text-4xl font-bold text-green-300">
-                    {/* Parse the prediction to extract recovery rate */}
-                    ~92%
+                    {(() => {
+                      try {
+                        const parsed = JSON.parse(prediction);
+                        if (parsed.recoveryRate) return `${parsed.recoveryRate}%`;
+                      } catch {}
+                      const match = prediction.match(/(\d+\.?\d*)\s*%/);
+                      return match ? `~${match[1]}%` : 'See analysis';
+                    })()}
                   </p>
                 </div>
 
@@ -177,11 +183,27 @@ const RecoveryPrediction = () => {
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   <div className="bg-slate-700 p-3 rounded">
                     <p className="text-slate-400">Confidence Level</p>
-                    <p className="text-blue-300 font-semibold">High</p>
+                    <p className="text-blue-300 font-semibold">
+                      {(() => {
+                        try {
+                          const parsed = JSON.parse(prediction);
+                          if (parsed.confidence) return parsed.confidence;
+                        } catch {}
+                        return 'See analysis';
+                      })()}
+                    </p>
                   </div>
                   <div className="bg-slate-700 p-3 rounded">
-                    <p className="text-slate-400">Risk Factor</p>
-                    <p className="text-yellow-300 font-semibold">Low</p>
+                    <p className="text-slate-400">Key Factors</p>
+                    <p className="text-yellow-300 font-semibold">
+                      {(() => {
+                        try {
+                          const parsed = JSON.parse(prediction);
+                          if (parsed.factors) return parsed.factors;
+                        } catch {}
+                        return 'See analysis';
+                      })()}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -189,8 +211,8 @@ const RecoveryPrediction = () => {
               <div className="flex flex-col items-center justify-center h-64 text-center">
                 <p className="text-slate-400">
                   {loading
-                    ? 'AI is generating recovery rate prediction...'
-                    : 'Fill in the leaching parameters and click "Predict Recovery Rate" to get an AI forecast'}
+                    ? 'AI is generating your recovery prediction...'
+                    : 'Fill in the parameters and click "Predict Recovery Rate" to see results'}
                 </p>
               </div>
             )}

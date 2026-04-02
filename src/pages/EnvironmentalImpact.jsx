@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { analyzeEnvironmentalImpact } from '../services/openRouterService';
-import { Loader, Send, Leaf } from 'lucide-react';
+import { Loader, Leaf } from 'lucide-react';
 
 const EnvironmentalImpact = () => {
   const [formData, setFormData] = useState({
@@ -36,6 +36,20 @@ const EnvironmentalImpact = () => {
     }
   };
 
+  const getSeverity = (value, thresholds) => {
+    if (value >= thresholds[2]) return { label: 'Critical', color: 'red' };
+    if (value >= thresholds[1]) return { label: 'High', color: 'orange' };
+    if (value >= thresholds[0]) return { label: 'Moderate', color: 'yellow' };
+    return { label: 'Low', color: 'green' };
+  };
+
+  const severities = useMemo(() => ({
+    waste: getSeverity(formData.wasteGeneration, [100, 200, 300]),
+    emissions: getSeverity(formData.emissions, [800, 1500, 2500]),
+    water: getSeverity(formData.waterUsage, [300, 600, 900]),
+    energy: getSeverity(formData.energyConsumption, [150, 300, 450]),
+  }), [formData]);
+
   return (
     <div className="space-y-6">
       <div className="mb-8">
@@ -68,7 +82,7 @@ const EnvironmentalImpact = () => {
 
             <div>
               <label className="block text-sm font-medium text-slate-300 mb-2">
-                Water Usage (m³/day)
+                Water Usage (m3/day)
               </label>
               <input
                 type="number"
@@ -146,22 +160,20 @@ const EnvironmentalImpact = () => {
             {analysis ? (
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-3 mb-4">
-                  <div className="bg-red-900 bg-opacity-20 border border-red-700 p-3 rounded">
-                    <p className="text-xs text-red-200">Waste Impact</p>
-                    <p className="text-lg font-bold text-red-300">High</p>
-                  </div>
-                  <div className="bg-orange-900 bg-opacity-20 border border-orange-700 p-3 rounded">
-                    <p className="text-xs text-orange-200">Emissions</p>
-                    <p className="text-lg font-bold text-orange-300">Moderate</p>
-                  </div>
-                  <div className="bg-yellow-900 bg-opacity-20 border border-yellow-700 p-3 rounded">
-                    <p className="text-xs text-yellow-200">Water Usage</p>
-                    <p className="text-lg font-bold text-yellow-300">High</p>
-                  </div>
-                  <div className="bg-blue-900 bg-opacity-20 border border-blue-700 p-3 rounded">
-                    <p className="text-xs text-blue-200">Energy</p>
-                    <p className="text-lg font-bold text-blue-300">Moderate</p>
-                  </div>
+                  {[
+                    { key: 'waste', label: 'Waste Impact' },
+                    { key: 'emissions', label: 'Emissions' },
+                    { key: 'water', label: 'Water Usage' },
+                    { key: 'energy', label: 'Energy' },
+                  ].map(({ key, label }) => {
+                    const s = severities[key];
+                    return (
+                      <div key={key} className={`bg-${s.color}-900 bg-opacity-20 border border-${s.color}-700 p-3 rounded`}>
+                        <p className={`text-xs text-${s.color}-200`}>{label}</p>
+                        <p className={`text-lg font-bold text-${s.color}-300`}>{s.label}</p>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 <div className="bg-slate-700 p-4 rounded-lg">

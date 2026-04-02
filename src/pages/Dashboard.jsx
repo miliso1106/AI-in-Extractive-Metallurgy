@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react';
+﻿import React from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { TrendingUp, AlertCircle, CheckCircle, Database } from 'lucide-react';
 import processDataFile from '../data/processData.json';
 
-const Dashboard = () => {
-  const [stats, setStats] = useState({
-    efficiency: 87.3,
-    recoveryRate: 92.1,
+const Dashboard = ({ setCurrentPage }) => {
+  const processes = processDataFile.processes;
+  const stats = {
+    efficiency: parseFloat((processes.reduce((s, p) => s + p.efficiency, 0) / processes.length).toFixed(1)),
+    recoveryRate: parseFloat((processes.reduce((s, p) => s + p.recoveryRate, 0) / processes.length).toFixed(1)),
     wasteReduction: 34.2,
     energyOptimization: 28.5,
-  });
+  };
 
   // Sample data for charts
   const efficiencyData = [
@@ -43,7 +44,7 @@ const Dashboard = () => {
       </div>
       {trend && (
         <p className={`text-sm mt-2 ${trend > 0 ? 'text-green-400' : 'text-red-400'}`}>
-          {trend > 0 ? '↑' : '↓'} {Math.abs(trend)}% from yesterday
+          {trend > 0 ? 'up' : 'down'} {Math.abs(trend)}% from yesterday
         </p>
       )}
     </div>
@@ -159,7 +160,7 @@ const Dashboard = () => {
       {/* Recent Alerts */}
       <div className="card">
         <div className="card-header">
-          <h2 className="text-xl font-semibold text-white">System Alerts & Status</h2>
+          <h2 className="text-xl font-semibold text-white">System Alerts and Status</h2>
         </div>
         <div className="card-body">
           <div className="space-y-3">
@@ -174,7 +175,7 @@ const Dashboard = () => {
               <AlertCircle className="text-blue-400 mr-3 flex-shrink-0 mt-0.5" size={20} />
               <div>
                 <p className="font-semibold text-blue-400">AI Recommendation</p>
-                <p className="text-blue-200 text-sm">Consider adjusting leaching temperature by +2°C for improved recovery</p>
+                <p className="text-blue-200 text-sm">Consider adjusting leaching temperature by +2 C for improved recovery</p>
               </div>
             </div>
           </div>
@@ -188,9 +189,9 @@ const Dashboard = () => {
             <Database className="text-blue-400" size={20} />
             <h2 className="text-xl font-semibold text-white">Recent Process Data</h2>
           </div>
-          <a href="#" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
-            View All →
-          </a>
+          <button onClick={() => setCurrentPage && setCurrentPage('data')} className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+            View All
+          </button>
         </div>
         <div className="card-body">
           <div className="overflow-x-auto">
@@ -201,7 +202,7 @@ const Dashboard = () => {
                   <th className="text-left px-4 py-2 text-slate-300 font-semibold">Recovery %</th>
                   <th className="text-left px-4 py-2 text-slate-300 font-semibold">Efficiency %</th>
                   <th className="text-left px-4 py-2 text-slate-300 font-semibold">Status</th>
-                  <th className="text-left px-4 py-2 text-slate-300 font-semibold">CO₂ (kg)</th>
+                  <th className="text-left px-4 py-2 text-slate-300 font-semibold">CO2 (kg)</th>
                 </tr>
               </thead>
               <tbody>

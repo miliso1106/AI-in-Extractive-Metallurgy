@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Gold Cyanidation (CIL),4.5,25,1,24,88,82,220,800,160,850,Warning,2024-01-15 10:30

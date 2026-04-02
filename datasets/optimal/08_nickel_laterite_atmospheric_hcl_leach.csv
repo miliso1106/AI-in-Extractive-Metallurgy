@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Nickel Laterite Atmospheric HCl Leach,1.1,85,1,2,93.5,88.5,200,650,260,1300,Optimal,2024-01-15 10:30

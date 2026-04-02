@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Iron Magnetite Processing,62,800,1,4,93.5,88.5,300,400,520,2500,Optimal,2024-01-15 10:30

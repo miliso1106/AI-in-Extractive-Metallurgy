@@ -1,0 +1,11 @@
+processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status
+Gold CIL Circuit - Run A1,4.8,22,1.0,1440,89.2,82.4,210,780,165,825,Warning
+Gold CIL Circuit - Run A2,5.5,25,1.0,1440,93.1,86.8,185,720,158,790,Optimal
+Gold CIL Circuit - Run A3,5.1,23,1.0,1200,90.5,83.7,198,750,162,810,Warning
+Gold CIL Circuit - Run A4,6.2,25,1.0,1440,95.8,90.1,160,680,150,750,Optimal
+Gold CIL Circuit - Run A5,4.5,20,1.0,1680,87.3,80.9,225,810,172,860,Alert
+Gold CIL Circuit - Run A6,5.8,24,1.0,1440,94.2,88.3,172,700,155,775,Optimal
+Gold CIL Circuit - Run A7,4.2,21,1.0,1920,85.1,78.6,240,840,180,900,Alert
+Gold CIL Circuit - Run A8,5.3,25,1.0,1440,91.8,85.2,190,735,160,800,Optimal
+Gold CIL Circuit - Run B1,6.0,26,1.0,1200,94.9,89.5,165,690,152,760,Optimal
+Gold CIL Circuit - Run B2,4.9,22,1.0,1440,88.7,81.9,215,770,168,840,Warning

@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Zinc Roasting,6.1,900,3.2,2,93.5,88.5,180,300,320,1600,Optimal,2024-01-15 10:30

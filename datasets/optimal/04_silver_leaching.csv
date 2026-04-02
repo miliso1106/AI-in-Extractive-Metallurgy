@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Silver Leaching,3,50,1,16,93.5,88.5,160,500,170,820,Optimal,2024-01-15 10:30

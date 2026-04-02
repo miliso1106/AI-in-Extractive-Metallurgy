@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+OptimalProcess5,2.5,70,2.5,8,94.2,87.3,150,500,250,1200,Optimal,2024-01-15 10:30

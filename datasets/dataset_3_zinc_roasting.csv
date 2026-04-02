@@ -1,0 +1,11 @@
+processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status
+Zinc Roast-Leach - Shift 1,52.0,920,3.5,2.0,93.8,89.2,190,310,340,1720,Optimal
+Zinc Roast-Leach - Shift 2,48.5,880,3.2,2.5,90.1,84.5,215,340,355,1790,Warning
+Zinc Roast-Leach - Shift 3,55.0,950,3.8,1.8,96.2,92.1,165,280,360,1820,Optimal
+Zinc Roast-Leach - Shift 4,45.0,850,3.0,3.0,86.5,79.8,245,380,330,1670,Alert
+Zinc Roast-Leach - Shift 5,51.0,910,3.4,2.2,92.4,87.3,200,320,345,1745,Optimal
+Zinc Roast-Leach - Shift 6,47.0,870,3.1,2.8,88.9,82.1,228,360,350,1770,Warning
+Zinc Roast-Leach - Shift 7,53.5,935,3.6,2.0,95.0,90.8,175,295,355,1795,Optimal
+Zinc Roast-Leach - Shift 8,44.0,840,2.9,3.2,84.2,77.5,260,400,325,1640,Alert
+Zinc Roast-Leach - Shift 9,50.0,900,3.3,2.3,91.7,86.0,205,330,342,1730,Optimal
+Zinc Roast-Leach - Shift 10,49.0,890,3.2,2.5,90.8,85.2,210,335,348,1760,Warning

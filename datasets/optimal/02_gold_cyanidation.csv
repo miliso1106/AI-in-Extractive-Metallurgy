@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Gold Cyanidation,5.2,25,1.0,24,93.5,88.5,200,750,180,900,Optimal,2024-01-15 10:30

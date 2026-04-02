@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ChevronUp, ChevronDown, Search, AlertCircle, CheckCircle, AlertTriangle } from 'lucide-react';
 
 const DataTable = ({ data }) => {
@@ -9,7 +9,8 @@ const DataTable = ({ data }) => {
   // Filter and sort data
   const filteredData = data
     .filter((item) => {
-      const matchesSearch = item.processName.toLowerCase().includes(searchTerm.toLowerCase());
+      const processName = String(item.processName ?? '');
+      const matchesSearch = processName.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesStatus = filterStatus === 'all' || item.status === filterStatus;
       return matchesSearch && matchesStatus;
     })
@@ -23,7 +24,9 @@ const DataTable = ({ data }) => {
           : bValue.localeCompare(aValue);
       }
 
-      return sortConfig.direction === 'asc' ? aValue - bValue : bValue - aValue;
+      const aNumber = Number.isFinite(aValue) ? aValue : parseFloat(aValue) || 0;
+      const bNumber = Number.isFinite(bValue) ? bValue : parseFloat(bValue) || 0;
+      return sortConfig.direction === 'asc' ? aNumber - bNumber : bNumber - aNumber;
     });
 
   const handleSort = (key) => {
@@ -102,10 +105,10 @@ const DataTable = ({ data }) => {
             <tr>
               <TableHeader label="Process Name" sortKey="processName" columnClass="w-40" />
               <TableHeader label="Ore Grade (%)" sortKey="oreGrade" columnClass="w-28" />
-              <TableHeader label="Temp (°C)" sortKey="temperature" columnClass="w-24" />
+              <TableHeader label="Temp (C)" sortKey="temperature" columnClass="w-24" />
               <TableHeader label="Recovery (%)" sortKey="recoveryRate" columnClass="w-28" />
               <TableHeader label="Efficiency (%)" sortKey="efficiency" columnClass="w-28" />
-              <TableHeader label="CO₂ (kg/day)" sortKey="co2Emissions" columnClass="w-28" />
+              <TableHeader label="CO2 (kg/day)" sortKey="co2Emissions" columnClass="w-28" />
               <TableHeader label="Status" sortKey="status" columnClass="w-28" />
             </tr>
           </thead>
@@ -117,15 +120,15 @@ const DataTable = ({ data }) => {
                   className="hover:bg-slate-750 transition border-b border-slate-700 hover:bg-slate-700"
                 >
                   <td className="px-4 py-3 text-white font-medium">{item.processName}</td>
-                  <td className="px-4 py-3 text-slate-300">{item.oreGrade.toFixed(2)}</td>
-                  <td className="px-4 py-3 text-slate-300">{item.temperature}</td>
+                  <td className="px-4 py-3 text-slate-300">{Number(item.oreGrade ?? 0).toFixed(2)}</td>
+                  <td className="px-4 py-3 text-slate-300">{Number(item.temperature ?? 0)}</td>
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-2">
-                      <span className="text-slate-300">{item.recoveryRate.toFixed(1)}</span>
+                      <span className="text-slate-300">{Number(item.recoveryRate ?? 0).toFixed(1)}</span>
                       <div className="w-16 bg-slate-700 rounded-full h-2">
                         <div
                           className="bg-green-500 h-2 rounded-full"
-                          style={{ width: `${item.recoveryRate}%` }}
+                          style={{ width: `${Number(item.recoveryRate ?? 0)}%` }}
                         />
                       </div>
                     </div>
@@ -133,18 +136,13 @@ const DataTable = ({ data }) => {
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-2">
                       <span className={item.efficiency > 85 ? 'text-green-300' : 'text-orange-300'}>
-                        {item.efficiency.toFixed(1)}
+                        {Number(item.efficiency ?? 0).toFixed(1)}
                       </span>
                       <div className="w-16 bg-slate-700 rounded-full h-2">
                         <div
-                          className={item.efficiency > 85 ? 'bg-green-500' : 'bg-orange-500'}
-                          style={{ height: '100%', width: `${item.efficiency}%` }} 
-                        >
-                          <div
-                            style={{ width: `${item.efficiency}%`, height: '100%' }}
-                            className={`rounded-full ${item.efficiency > 85 ? 'bg-green-500' : 'bg-orange-500'}`}
-                          />
-                        </div>
+                          className={`h-2 rounded-full ${item.efficiency > 85 ? 'bg-green-500' : 'bg-orange-500'}`}
+                          style={{ width: `${Number(item.efficiency ?? 0)}%` }}
+                        />
                       </div>
                     </div>
                   </td>
@@ -174,19 +172,23 @@ const DataTable = ({ data }) => {
         <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
           <p className="text-slate-400">Avg. Recovery</p>
           <p className="text-xl font-bold text-green-400">
-            {(filteredData.reduce((sum, item) => sum + item.recoveryRate, 0) / filteredData.length).toFixed(1)}%
+            {filteredData.length
+              ? (filteredData.reduce((sum, item) => sum + Number(item.recoveryRate ?? 0), 0) / filteredData.length).toFixed(1)
+              : '0.0'}%
           </p>
         </div>
         <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
           <p className="text-slate-400">Avg. Efficiency</p>
           <p className="text-xl font-bold text-green-400">
-            {(filteredData.reduce((sum, item) => sum + item.efficiency, 0) / filteredData.length).toFixed(1)}%
+            {filteredData.length
+              ? (filteredData.reduce((sum, item) => sum + Number(item.efficiency ?? 0), 0) / filteredData.length).toFixed(1)
+              : '0.0'}%
           </p>
         </div>
         <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
-          <p className="text-slate-400">Total CO₂</p>
+          <p className="text-slate-400">Total CO2</p>
           <p className="text-xl font-bold text-orange-400">
-            {filteredData.reduce((sum, item) => sum + item.co2Emissions, 0).toLocaleString()} kg
+            {filteredData.reduce((sum, item) => sum + Number(item.co2Emissions ?? 0), 0).toLocaleString()} kg
           </p>
         </div>
       </div>

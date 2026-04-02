@@ -1,0 +1,2 @@
+﻿processName,oreGrade,temperature,pressure,leachingTime,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,timestamp
+Copper Heap Leaching,0.8,45,1,72,83,75,180,900,120,700,Alert,2024-01-15 10:30
