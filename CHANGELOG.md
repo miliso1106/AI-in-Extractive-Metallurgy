@@ -1,15 +1,15 @@
-# Project Changelog & Notes
+﻿# Project Changelog & Notes
 
-## Project: AI-Driven Extractive Metallurgy Dashboard
-**Status:** ✅ Complete & Ready to Deploy
+## Project: AI/ML-Driven Extractive Metallurgy Dashboard
+**Status:** âœ… Complete & Ready to Deploy
 **Created:** April 2026
-**Technology:** React 18 + Vite + Tailwind CSS + Open Router AI
+**Technology:** React 18 + Vite + Tailwind CSS + Open Router AI/ML
 
 ---
 
-## 📋 Implementation Summary
+## ðŸ“‹ Implementation Summary
 
-### ✅ Completed Features
+### âœ… Completed Features
 
 #### Phase 1: Project Setup
 - [x] Git repository initialized
@@ -26,9 +26,9 @@
 - [x] System alerts and status indicators
 - [x] Mobile-responsive layout
 
-#### Phase 3: AI Integration
+#### Phase 3: AI/ML Integration
 - [x] Open Router API service integration
-- [x] Process Analyzer with AI recommendations
+- [x] Process Analyzer with AI/ML recommendations
 - [x] Recovery Rate prediction module
 - [x] Environmental impact analysis module
 - [x] Error handling and loading states
@@ -51,51 +51,51 @@
 
 ---
 
-## 📂 File Structure Created
+## ðŸ“‚ File Structure Created
 
 ```
 ai-extractive-metallurgy/
-│
-├── Documentation (5 files)
-│   ├── README.md                    (Main documentation)
-│   ├── QUICKSTART.md               (5-minute setup)
-│   ├── SETUP_INSTRUCTIONS.md       (Detailed setup)
-│   ├── REPORT_GUIDELINES.md        (Report template)
-│   └── CHANGELOG.md                (This file)
-│
-├── Source Code (src/)
-│   ├── main.jsx                    (React entry)
-│   ├── App.jsx                     (Main app)
-│   ├── index.css                   (Global styles)
-│   │
-│   ├── components/
-│   │   └── Header.jsx              (Navigation)
-│   │
-│   ├── pages/
-│   │   ├── Dashboard.jsx           (Home page)
-│   │   ├── ProcessAnalyzer.jsx     (AI optimization)
-│   │   ├── RecoveryPrediction.jsx  (Recovery forecasting)
-│   │   └── EnvironmentalImpact.jsx (Sustainability)
-│   │
-│   └── services/
-│       └── openRouterService.js    (API integration)
-│
-├── Configuration
-│   ├── package.json                (Dependencies)
-│   ├── vite.config.js             (Build config)
-│   ├── tailwind.config.js         (Tailwind config)
-│   ├── postcss.config.js          (CSS processing)
-│   ├── .eslintrc.json             (Code linting)
-│   ├── .env.example               (Environment template)
-│   ├── .gitignore                 (Git exclusions)
-│   └── index.html                 (HTML entry)
-│
-└── Total: 18 files created/configured
+â”‚
+â”œâ”€â”€ Documentation (5 files)
+â”‚   â”œâ”€â”€ README.md                    (Main documentation)
+â”‚   â”œâ”€â”€ QUICKSTART.md               (5-minute setup)
+â”‚   â”œâ”€â”€ SETUP_INSTRUCTIONS.md       (Detailed setup)
+â”‚   â”œâ”€â”€ REPORT_GUIDELINES.md        (Report template)
+â”‚   â””â”€â”€ CHANGELOG.md                (This file)
+â”‚
+â”œâ”€â”€ Source Code (src/)
+â”‚   â”œâ”€â”€ main.jsx                    (React entry)
+â”‚   â”œâ”€â”€ App.jsx                     (Main app)
+â”‚   â”œâ”€â”€ index.css                   (Global styles)
+â”‚   â”‚
+â”‚   â”œâ”€â”€ components/
+â”‚   â”‚   â””â”€â”€ Header.jsx              (Navigation)
+â”‚   â”‚
+â”‚   â”œâ”€â”€ pages/
+â”‚   â”‚   â”œâ”€â”€ Dashboard.jsx           (Home page)
+â”‚   â”‚   â”œâ”€â”€ ProcessAnalyzer.jsx     (AI/ML optimization)
+â”‚   â”‚   â”œâ”€â”€ RecoveryPrediction.jsx  (Recovery forecasting)
+â”‚   â”‚   â””â”€â”€ EnvironmentalImpact.jsx (Sustainability)
+â”‚   â”‚
+â”‚   â””â”€â”€ services/
+â”‚       â””â”€â”€ openRouterService.js    (API integration)
+â”‚
+â”œâ”€â”€ Configuration
+â”‚   â”œâ”€â”€ package.json                (Dependencies)
+â”‚   â”œâ”€â”€ vite.config.js             (Build config)
+â”‚   â”œâ”€â”€ tailwind.config.js         (Tailwind config)
+â”‚   â”œâ”€â”€ postcss.config.js          (CSS processing)
+â”‚   â”œâ”€â”€ .eslintrc.json             (Code linting)
+â”‚   â”œâ”€â”€ .env.example               (Environment template)
+â”‚   â”œâ”€â”€ .gitignore                 (Git exclusions)
+â”‚   â””â”€â”€ index.html                 (HTML entry)
+â”‚
+â””â”€â”€ Total: 18 files created/configured
 ```
 
 ---
 
-## 🛠️ Technology Stack
+## ðŸ› ï¸ Technology Stack
 
 | Technology | Version | Purpose |
 |-----------|---------|---------|
@@ -109,7 +109,7 @@ ai-extractive-metallurgy/
 
 ---
 
-## 🎯 Key Features Breakdown
+## ðŸŽ¯ Key Features Breakdown
 
 ### Dashboard Page
 **What it shows:**
@@ -128,11 +128,11 @@ ai-extractive-metallurgy/
 **User Input:**
 - Process Type (text)
 - Current Efficiency (0-100%)
-- Temperature (°C)
+- Temperature (Â°C)
 - Pressure (atm)
 - Current Issues (text)
 
-**AI Output:**
+**AI/ML Output:**
 - Specific optimization recommendations
 - Expected improvement percentage
 - Implementation timeline
@@ -142,11 +142,11 @@ ai-extractive-metallurgy/
 **User Input:**
 - Ore Grade (%)
 - Leaching Time (hours)
-- Temperature (°C)
+- Temperature (Â°C)
 - Chemical Concentration (%)
 - pH Level
 
-**AI Output:**
+**AI/ML Output:**
 - Predicted recovery rate (%)
 - Confidence assessment
 - Success factors
@@ -155,11 +155,11 @@ ai-extractive-metallurgy/
 ### Environmental Impact
 **User Input:**
 - Waste Generation (tons/day)
-- Water Usage (m³/day)
+- Water Usage (mÂ³/day)
 - Energy Consumption (MWh/day)
 - CO2 Emissions (kg/day)
 
-**AI Output:**
+**AI/ML Output:**
 - Environmental impact assessment
 - Sustainability recommendations
 - Cost-benefit analysis
@@ -167,11 +167,11 @@ ai-extractive-metallurgy/
 
 ---
 
-## 🚀 How to Run
+## ðŸš€ How to Run
 
 ### Development Mode
 ```bash
-cd "C:\Users\soumi\OneDrive\Desktop\AI in Extractive Metallurgy"
+cd "C:\Users\soumi\OneDrive\Desktop\AI/ML in Extractive Metallurgy"
 npm install
 cp .env.example .env
 # Edit .env and add your API key
@@ -186,9 +186,9 @@ npm run preview
 
 ---
 
-## 🔐 Security Features
+## ðŸ” Security Features
 
-✅ **Implemented:**
+âœ… **Implemented:**
 - Environment variables for API keys
 - `.gitignore` to prevent secret sharing
 - VITE_ prefix for frontend env vars
@@ -197,7 +197,7 @@ npm run preview
 
 ---
 
-## 📊 AI Integration Details
+## ðŸ“Š AI/ML Integration Details
 
 ### LLM Model Used
 **Open Router API** (Multiple Models Available)
@@ -205,7 +205,7 @@ npm run preview
 - Cost: Pay-per-token on free tier
 
 ### API Endpoints Used
-1. `/chat/completions` - For all AI operations
+1. `/chat/completions` - For all AI/ML operations
 
 ### Prompt Engineering
 Each module uses specialized prompts:
@@ -221,28 +221,28 @@ Assesses sustainability and recommends improvements
 
 ---
 
-## 🎨 UI/UX Features
+## ðŸŽ¨ UI/UX Features
 
-✅ **Responsive Design**
+âœ… **Responsive Design**
 - Mobile-first approach
 - Breakpoints: sm, md, lg
 - Touch-friendly navigation
 - Auto-adjusting layouts
 
-✅ **Dark Theme**
+âœ… **Dark Theme**
 - Professional dark blue/slate colors
 - Easy on eyes for long usage
 - Better for data visualization
 - Consistent branding
 
-✅ **Interactive Elements**
+âœ… **Interactive Elements**
 - Hover effects on cards
 - Active navigation indicators
 - Loading spinners for async operations
 - Error messages with context
 - Success confirmations
 
-✅ **Performance**
+âœ… **Performance**
 - Lazy loading for components
 - React hooks for state management
 - Efficient re-renders
@@ -250,24 +250,24 @@ Assesses sustainability and recommends improvements
 
 ---
 
-## 📈 Machine Learning Connection
+## ðŸ“ˆ Machine Learning Connection
 
 **How AI/ML is Applied:**
 1. **Domain-Specific Knowledge:** Trained LLMs understand metallurgical processes
-2. **Parameter Analysis:** AI analyzes inputs against metallurgy principles
+2. **Parameter Analysis:** AI/ML analyzes inputs against metallurgy principles
 3. **Pattern Recognition:** Identifies optimal parameter combinations
 4. **Predictive Analysis:** Forecasts outcomes based on input patterns
 5. **Recommendation Engine:** Generates actionable suggestions
 
 ---
 
-## 🧪 Testing Scenarios
+## ðŸ§ª Testing Scenarios
 
 ### Test Case 1: Copper Leaching Optimization
 **Input:**
 - Process: Copper Leaching
 - Efficiency: 82%
-- Temp: 65°C
+- Temp: 65Â°C
 - Issue: Low recovery rate
 
 **Expected Output:**
@@ -279,7 +279,7 @@ Assesses sustainability and recommends improvements
 **Input:**
 - Ore Grade: 4.5%
 - Time: 24h
-- Temp: 80°C
+- Temp: 80Â°C
 
 **Expected Output:**
 - ~90-92% recovery prediction
@@ -289,7 +289,7 @@ Assesses sustainability and recommends improvements
 ### Test Case 3: Environmental Assessment
 **Input:**
 - Waste: 200 tons/day
-- Water: 600 m³/day
+- Water: 600 mÂ³/day
 - Energy: 300 MWh/day
 
 **Expected Output:**
@@ -299,17 +299,17 @@ Assesses sustainability and recommends improvements
 
 ---
 
-## 🐛 Known Limitations
+## ðŸ› Known Limitations
 
 1. **API Dependency:** Requires active Open Router API key and internet connection
-2. **Response Time:** AI analysis takes 10-30 seconds
+2. **Response Time:** AI/ML analysis takes 10-30 seconds
 3. **Historical Data:** Dashboard currently shows example data (not persistent)
 4. **Real-time Integration:** Not connected to actual sensors/equipment
 5. **Data Export:** Limited to browser display (can add PDF export later)
 
 ---
 
-## 🔮 Future Enhancement Ideas
+## ðŸ”® Future Enhancement Ideas
 
 ### Short-term (Phase 6)
 - [ ] Add PDF report generation
@@ -337,7 +337,7 @@ Assesses sustainability and recommends improvements
 
 ---
 
-## 📝 Report Preparation
+## ðŸ“ Report Preparation
 
 **For your handwritten report, use:**
 - REPORT_GUIDELINES.md (Complete template)
@@ -347,30 +347,30 @@ Assesses sustainability and recommends improvements
 
 ---
 
-## 🎓 Learning Outcomes
+## ðŸŽ“ Learning Outcomes
 
 Upon completing this project, you'll understand:
 
-✅ **Technology:**
+âœ… **Technology:**
 - React component architecture
 - Vite build optimization
 - Tailwind CSS utility framework
 - API integration patterns
 - State management with hooks
 
-✅ **AI/ML:**
+âœ… **AI/ML:**
 - LLM integration and prompting
-- Domain-specific AI applications
+- Domain-specific AI/ML applications
 - Response parsing and handling
-- Error management in AI systems
+- Error management in AI/ML systems
 
-✅ **Metallurgy:**
+âœ… **Metallurgy:**
 - Extractive metallurgy processes
 - Parameters affecting recovery
 - Environmental considerations
 - Optimization strategies
 
-✅ **Software Engineering:**
+âœ… **Software Engineering:**
 - Full-stack application design
 - UI/UX best practices
 - Security and best practices
@@ -378,7 +378,7 @@ Upon completing this project, you'll understand:
 
 ---
 
-## 📊 Project Statistics
+## ðŸ“Š Project Statistics
 
 | Metric | Value |
 |--------|-------|
@@ -394,21 +394,21 @@ Upon completing this project, you'll understand:
 
 ---
 
-## ✅ Quality Assurance
+## âœ… Quality Assurance
 
-✅ **Code Quality:**
+âœ… **Code Quality:**
 - ESLint configured for React
 - Best practices implemented
 - Proper error handling
 - Code comments included
 
-✅ **UI/UX:**
+âœ… **UI/UX:**
 - Responsive design tested
 - Accessibility considered
 - Performance optimized
 - User flows intuitive
 
-✅ **Documentation:**
+âœ… **Documentation:**
 - Comprehensive README
 - Quick start guide
 - Setup instructions
@@ -417,10 +417,10 @@ Upon completing this project, you'll understand:
 
 ---
 
-## 🎉 Project Status
+## ðŸŽ‰ Project Status
 
 ### Completion:
-✅ **100% Complete** - Ready for deployment and presentation
+âœ… **100% Complete** - Ready for deployment and presentation
 
 ### Next Steps:
 1. Install dependencies: `npm install`
@@ -432,30 +432,32 @@ Upon completing this project, you'll understand:
 
 ---
 
-## 📞 Support Resources
+## ðŸ“ž Support Resources
 
 - **Documentation:** README.md, QUICKSTART.md, SETUP_INSTRUCTIONS.md
 - **Troubleshooting:** Check README.md troubleshooting section
 - **API Docs:** https://openrouter.ai/docs
 - **React Docs:** https://react.dev
-- **GitHub:** https://github.com/miliso1106/AI-in-Extractive-Metallurgy
+- **GitHub:** https://github.com/miliso1106/AI/ML-in-Extractive-Metallurgy
 
 ---
 
-## 🏆 Success Criteria
+## ðŸ† Success Criteria
 
 This project successfully:
-- ✅ Demonstrates AI/ML application in real-world scenario
-- ✅ Creates practical, usable software
-- ✅ Shows complete software development lifecycle
-- ✅ Integrates with modern technologies
-- ✅ Provides documented, maintainable code
-- ✅ Includes comprehensive reporting
+- âœ… Demonstrates AI/ML application in real-world scenario
+- âœ… Creates practical, usable software
+- âœ… Shows complete software development lifecycle
+- âœ… Integrates with modern technologies
+- âœ… Provides documented, maintainable code
+- âœ… Includes comprehensive reporting
 
-**Status:** All criteria met! 🎉
+**Status:** All criteria met! ðŸŽ‰
 
 ---
 
 **Project Created:** April 2, 2026
 **Version:** 1.0.0
-**Status:** ✅ Production Ready
+**Status:** âœ… Production Ready
+
+

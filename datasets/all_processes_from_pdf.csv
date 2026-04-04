@@ -1,0 +1,201 @@
+processName,condition_1_name,condition_1_value,condition_2_name,condition_2_value,condition_3_name,condition_3_value,condition_4_name,condition_4_value,recoveryRate,efficiency,wasteGenerated,waterUsage,energyConsumption,co2Emissions,status,sourcePdf
+Copper Heap Leach,oreGrade (g/t Cu),1.8,temperature (degC),55,pressure (atm),1.2,leachingTime (hr),720,68,62,163,499,211,1027,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.1,temperature (degC),60,pressure (atm),1.3,leachingTime (hr),696,68,62,147,451,193,972,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.4,temperature (degC),62,pressure (atm),1.2,leachingTime (hr),744,68,62,134,425,183,939,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),1.9,temperature (degC),58,pressure (atm),1.4,leachingTime (hr),720,68,62,161,490,201,988,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.6,temperature (degC),65,pressure (atm),1.3,leachingTime (hr),672,73.7,62,117,387,180,907,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.3,temperature (degC),63,pressure (atm),1.2,leachingTime (hr),720,69.4,62,136,440,186,941,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2,temperature (degC),57,pressure (atm),1.5,leachingTime (hr),744,68,62,158,481,204,981,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.8,temperature (degC),68,pressure (atm),1.3,leachingTime (hr),696,74.9,63.8,105,361,164,865,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),1.7,temperature (degC),52,pressure (atm),1.2,leachingTime (hr),768,68,62,171,518,213,1059,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.5,temperature (degC),64,pressure (atm),1.4,leachingTime (hr),720,69.9,62,123,413,177,914,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.2,temperature (degC),61,pressure (atm),1.3,leachingTime (hr),720,68,62,143,451,195,966,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),3,temperature (degC),70,pressure (atm),1.2,leachingTime (hr),648,79.5,67.1,97,335,158,858,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),1.6,temperature (degC),50,pressure (atm),1.5,leachingTime (hr),792,68,62,180,538,224,1063,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.9,temperature (degC),69,pressure (atm),1.3,leachingTime (hr),660,77.1,65.5,105,348,166,870,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2,temperature (degC),59,pressure (atm),1.4,leachingTime (hr),732,68,62,158,473,195,971,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),3.2,temperature (degC),72,pressure (atm),1.2,leachingTime (hr),624,82.5,71.1,91,312,149,814,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),1.5,temperature (degC),48,pressure (atm),1.6,leachingTime (hr),816,68,62,189,563,220,1089,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.7,temperature (degC),66,pressure (atm),1.3,leachingTime (hr),684,74.3,63,113,385,169,889,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),2.1,temperature (degC),61,pressure (atm),1.2,leachingTime (hr),720,68,62,150,452,194,957,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Heap Leach,oreGrade (g/t Cu),3.5,temperature (degC),75,pressure (atm),1.1,leachingTime (hr),600,89.6,76.1,70,278,144,767,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),1.5,temperature (degC),35,pH,8.5,reagentDosage (g/t),15,73.8,66.4,263,766,290,1243,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),2,temperature (degC),38,pH,9,reagentDosage (g/t),18,75.3,70.8,244,727,278,1182,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),2.5,temperature (degC),40,pH,8,reagentDosage (g/t),20,82.6,75,216,675,261,1160,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),1.8,temperature (degC),36,pH,8.8,reagentDosage (g/t),16,75.7,66.9,248,739,284,1235,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),3,temperature (degC),42,pH,7.5,reagentDosage (g/t),22,84.6,75.7,200,635,247,1092,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),2.2,temperature (degC),39,pH,9.2,reagentDosage (g/t),19,79.6,71.2,231,702,270,1169,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),1.2,temperature (degC),33,pH,9.5,reagentDosage (g/t),14,66.2,61.2,269,786,300,1285,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),2.8,temperature (degC),41,pH,8.2,reagentDosage (g/t),21,84.1,77.8,212,639,253,1127,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),1,temperature (degC),30,pH,9.8,reagentDosage (g/t),12,65,60,284,811,310,1311,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),3.5,temperature (degC),45,pH,7,reagentDosage (g/t),25,89.4,78.8,176,584,234,1049,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),2.6,temperature (degC),40,pH,8.5,reagentDosage (g/t),20,84.5,76.1,221,658,261,1134,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),1.7,temperature (degC),36,pH,9,reagentDosage (g/t),17,74.5,65.9,249,746,288,1221,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),0.8,temperature (degC),28,pH,10,reagentDosage (g/t),10,65,60,287,835,317,1302,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),3.2,temperature (degC),43,pH,7.8,reagentDosage (g/t),23,89.2,80,197,621,247,1067,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),2.4,temperature (degC),39,pH,8.6,reagentDosage (g/t),19,81.5,72.8,223,675,267,1179,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),4,temperature (degC),47,pH,6.5,reagentDosage (g/t),27,91.1,83.5,160,538,225,1020,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),1.3,temperature (degC),34,pH,9.3,reagentDosage (g/t),15,68.7,63.2,265,779,306,1273,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),2.9,temperature (degC),42,pH,8,reagentDosage (g/t),22,85.6,77.8,200,641,253,1124,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),0.9,temperature (degC),29,pH,9.7,reagentDosage (g/t),11,65,60,280,813,314,1317,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Copper Flotation,oreGrade (% Cu),3.8,temperature (degC),46,pH,7,reagentDosage (g/t),26,90.5,81,172,553,227,1025,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),42,temperature (degC),155,pressure (bar),30,(mol/L),5.5,70.9,65,1.72,6.6,60.5,17.4,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),45,temperature (degC),160,pressure (bar),28,(mol/L),6,74.4,68.1,1.71,6.3,60.2,17.2,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),48,temperature (degC),165,pressure (bar),32,(mol/L),5,78.2,71.9,1.71,6.3,59.5,16.8,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),40,temperature (degC),150,pressure (bar),25,(mol/L),6.5,70,65,1.78,6.7,61,17.4,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),50,temperature (degC),170,pressure (bar),35,(mol/L),4.5,82.5,75.2,1.65,6.1,59.8,16.5,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),43,temperature (degC),158,pressure (bar),29,(mol/L),5.8,73.3,65.8,1.73,6.5,60.3,17.1,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),38,temperature (degC),148,pressure (bar),24,(mol/L),7,70,65,1.74,6.8,61.6,17.6,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),52,temperature (degC),172,pressure (bar),36,(mol/L),4.2,84.3,76.4,1.62,6,59.6,16.4,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),36,temperature (degC),145,pressure (bar),22,(mol/L),7.5,70,65,1.73,6.9,61.8,17.7,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),55,temperature (degC),178,pressure (bar),38,(mol/L),4,88.6,80.9,1.58,5.6,58.4,16.5,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),46,temperature (degC),162,pressure (bar),31,(mol/L),5.2,77.4,69.7,1.71,6.3,59.8,16.9,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),41,temperature (degC),153,pressure (bar),27,(mol/L),6.2,70,65,1.76,6.7,61.3,17.3,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),34,temperature (degC),142,pressure (bar),20,(mol/L),8,70,65,1.83,7.1,61.9,18,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),58,temperature (degC),182,pressure (bar),40,(mol/L),3.8,90.9,85.1,1.6,5.7,58.7,16.2,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),44,temperature (degC),159,pressure (bar),30,(mol/L),5.5,73.1,67.7,1.68,6.5,60.8,17.3,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),60,temperature (degC),185,pressure (bar),42,(mol/L),3.5,94.5,86.1,1.57,5.4,58.5,16.1,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),37,temperature (degC),147,pressure (bar),23,(mol/L),7.2,70,65,1.77,6.8,61.8,17.7,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),53,temperature (degC),175,pressure (bar),37,(mol/L),4.1,84.6,77.8,1.59,5.9,59.6,16.4,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),39,temperature (degC),150,pressure (bar),26,(mol/L),6.8,70,65,1.8,6.7,61.7,17.4,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Aluminum Bauxite (Bayer),Al2O3 Grade (%),48,temperature (degC),165,pressure (bar),33,(mol/L),5,79.8,71.3,1.71,6.1,59.5,16.9,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),55,grindSize (mm),0.3,magneticIntensity (Oe),15000,feedRate (t/hr),85,77.5,69.2,0.49,3.1,9.2,0.0843,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),58,grindSize (mm),0.25,magneticIntensity (Oe),18000,feedRate (t/hr),90,80.3,74.4,0.46,3.1,9.1,0.0834,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),62,grindSize (mm),0.2,magneticIntensity (Oe),20000,feedRate (t/hr),95,82,79.1,0.45,2.8,8.9,0.0798,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),50,grindSize (mm),0.35,magneticIntensity (Oe),12000,feedRate (t/hr),80,70.2,65.2,0.52,3.3,9.5,0.0861,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),65,grindSize (mm),0.18,magneticIntensity (Oe),22000,feedRate (t/hr),100,82,81,0.43,2.8,8.9,0.0797,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),53,grindSize (mm),0.3,magneticIntensity (Oe),14000,feedRate (t/hr),83,76.2,68.4,0.49,3.2,9.2,0.0841,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),48,grindSize (mm),0.4,magneticIntensity (Oe),10000,feedRate (t/hr),75,67.3,61.3,0.53,3.3,9.7,0.0864,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),68,grindSize (mm),0.15,magneticIntensity (Oe),25000,feedRate (t/hr),105,82,85,0.44,2.7,8.3,0.0776,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),45,grindSize (mm),0.45,magneticIntensity (Oe),8000,feedRate (t/hr),70,63.7,56.6,0.55,3.5,9.9,0.0879,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),70,grindSize (mm),0.12,magneticIntensity (Oe),28000,feedRate (t/hr),110,82,85,0.4,2.7,8.5,0.0748,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),57,grindSize (mm),0.28,magneticIntensity (Oe),16000,feedRate (t/hr),87,78.9,72.4,0.47,3.1,9.2,0.082,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),51,grindSize (mm),0.33,magneticIntensity (Oe),13000,feedRate (t/hr),82,72.8,64.1,0.52,3.3,9.4,0.0857,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),43,grindSize (mm),0.5,magneticIntensity (Oe),7000,feedRate (t/hr),68,59,55.4,0.55,3.4,9.9,0.0914,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),72,grindSize (mm),0.1,magneticIntensity (Oe),30000,feedRate (t/hr),112,82,85,0.41,2.7,8.3,0.0773,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),60,grindSize (mm),0.22,magneticIntensity (Oe),19000,feedRate (t/hr),92,82,76.6,0.47,3,9.1,0.0817,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),75,grindSize (mm),0.08,magneticIntensity (Oe),32000,feedRate (t/hr),115,82,85,0.39,2.5,8,0.0746,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),46,grindSize (mm),0.42,magneticIntensity (Oe),9000,feedRate (t/hr),72,65.9,58.9,0.54,3.4,9.7,0.0876,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),63,grindSize (mm),0.19,magneticIntensity (Oe),21000,feedRate (t/hr),97,82,79.1,0.45,2.8,8.7,0.0808,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),54,grindSize (mm),0.31,magneticIntensity (Oe),15500,feedRate (t/hr),84,76.2,67.4,0.49,3.2,9.3,0.0833,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Iron Magnetite,Fe Grade (%),66,grindSize (mm),0.16,magneticIntensity (Oe),23000,feedRate (t/hr),102,82,84.3,0.44,2.8,8.8,0.0796,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),52,temperature (degC),870,SO2 Concentration (%),12,feedRate (t/hr),2.8,77.1,70.7,0.5,11.4,21,2.15,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),55,temperature (degC),900,SO2 Concentration (%),10,feedRate (t/hr),3,81.2,75.9,0.5,11,20.2,2.04,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),58,temperature (degC),920,SO2 Concentration (%),8,feedRate (t/hr),3.2,84.8,77.8,0.47,10.7,19.8,2,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),50,temperature (degC),850,SO2 Concentration (%),14,feedRate (t/hr),2.6,74.5,68.4,0.52,11.1,21,2.13,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),60,temperature (degC),940,SO2 Concentration (%),7,feedRate (t/hr),3.5,86.7,81.5,0.46,10.4,19.3,2,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),53,temperature (degC),880,SO2 Concentration (%),11,feedRate (t/hr),2.9,78.1,72.6,0.52,11,20.8,2.13,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),48,temperature (degC),840,SO2 Concentration (%),15,feedRate (t/hr),2.5,72,68,0.51,11.6,21.7,2.14,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),62,temperature (degC),960,SO2 Concentration (%),6,feedRate (t/hr),3.8,90.6,84.3,0.47,10.4,19.6,1.95,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),46,temperature (degC),830,SO2 Concentration (%),16,feedRate (t/hr),2.4,72,68,0.53,11.9,21.7,2.15,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),65,temperature (degC),980,SO2 Concentration (%),5,feedRate (t/hr),4,94.2,87.5,0.43,10,19,1.91,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),56,temperature (degC),905,SO2 Concentration (%),9,feedRate (t/hr),3.1,83.1,77.4,0.47,10.5,20.1,2.07,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),51,temperature (degC),860,SO2 Concentration (%),13,feedRate (t/hr),2.7,76.9,70.2,0.52,11,21.1,2.13,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),44,temperature (degC),820,SO2 Concentration (%),17,feedRate (t/hr),2.3,72,68,0.56,12.1,21.8,2.25,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),68,temperature (degC),1000,SO2 Concentration (%),4,feedRate (t/hr),4.2,98,90,0.43,9.5,18.4,1.9,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),54,temperature (degC),890,SO2 Concentration (%),10,feedRate (t/hr),3,80.7,74.8,0.48,11.3,20.6,2.11,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),70,temperature (degC),1020,SO2 Concentration (%),3,feedRate (t/hr),4.5,98,92.7,0.43,9.7,18,1.92,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),47,temperature (degC),835,SO2 Concentration (%),15,feedRate (t/hr),2.4,72,68,0.53,11.8,21.4,2.2,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),63,temperature (degC),965,SO2 Concentration (%),6,feedRate (t/hr),3.7,92.1,83.9,0.47,9.9,19.1,1.98,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),49,temperature (degC),845,SO2 Concentration (%),14,feedRate (t/hr),2.5,73.3,68,0.54,11.3,21.1,2.17,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Zinc Roasting,Zn Grade (%),57,temperature (degC),910,SO2 Concentration (%),9,feedRate (t/hr),3.1,83.2,78.2,0.49,10.6,19.8,2.09,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),3.5,cyanideConc (mol/L),0.05,pH,10.5,leachTime (hr),24,73.2,68,1244886,256516,197941,18329,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),5,cyanideConc (mol/L),0.045,pH,11,leachTime (hr),18,80,73.9,1195931,249443,192692,17961,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),2.5,cyanideConc (mol/L),0.06,pH,10,leachTime (hr),30,72,68,1275309,259851,201496,18466,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),4.2,cyanideConc (mol/L),0.048,pH,10.8,leachTime (hr),22,77.2,69.5,1221514,252441,194993,18084,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),1.8,cyanideConc (mol/L),0.07,pH,9.5,leachTime (hr),36,72,68,1292851,262233,203684,18685,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),6,cyanideConc (mol/L),0.04,pH,11.5,leachTime (hr),15,84.7,77.6,1167830,245201,188694,17745,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),3,cyanideConc (mol/L),0.055,pH,10.3,leachTime (hr),27,72,68,1260341,257549,199974,18411,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),7,cyanideConc (mol/L),0.035,pH,12,leachTime (hr),12,87.8,81.1,1143685,241982,185873,17615,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),2,cyanideConc (mol/L),0.065,pH,9.8,leachTime (hr),33,72,68,1286844,261103,203441,18596,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),4.8,cyanideConc (mol/L),0.046,pH,11,leachTime (hr),20,79.8,72.4,1201741,251059,192754,17970,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),3.8,cyanideConc (mol/L),0.05,pH,10.6,leachTime (hr),24,75.4,68,1240939,254037,196964,18261,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),1.5,cyanideConc (mol/L),0.075,pH,9.2,leachTime (hr),40,72,68,1305226,263901,204693,18772,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),5.5,cyanideConc (mol/L),0.042,pH,11.2,leachTime (hr),16,83,75.1,1186210,248219,190990,17990,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),2.8,cyanideConc (mol/L),0.058,pH,10.2,leachTime (hr),28,72,68,1267604,258114,199874,18355,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),4.5,cyanideConc (mol/L),0.047,pH,10.9,leachTime (hr),21,77.1,71.2,1215938,251583,193981,18141,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),8,cyanideConc (mol/L),0.03,pH,12.5,leachTime (hr),10,91.4,85.9,1111874,238848,182288,17425,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),1.2,cyanideConc (mol/L),0.08,pH,9,leachTime (hr),45,72,68,1313251,265289,205948,18842,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),6.5,cyanideConc (mol/L),0.038,pH,11.8,leachTime (hr),13,86.2,78.9,1151659,243615,187499,17714,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),3.2,cyanideConc (mol/L),0.052,pH,10.4,leachTime (hr),26,72,68,1255887,257599,199243,18360,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Gold Cyanidation,oreGrade (g/t Au),5.8,cyanideConc (mol/L),0.041,pH,11.3,leachTime (hr),15,83.3,76,1171399,246664,189522,17790,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),180,cyanideConc (mol/L),0.35,pH,11,leachTime (hr),30,67.5,63.2,16634,20245,26351,124,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),250,cyanideConc (mol/L),0.3,pH,11.5,leachTime (hr),24,74.3,65,15733,19654,25054,118,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),320,cyanideConc (mol/L),0.28,pH,12,leachTime (hr),18,78.5,68.6,15367,18881,24258,112,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),150,cyanideConc (mol/L),0.4,pH,10.5,leachTime (hr),36,66.8,60.5,16818,20715,26080,124,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),400,cyanideConc (mol/L),0.25,pH,12.5,leachTime (hr),15,80.9,75.4,14792,18030,23288,109,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),200,cyanideConc (mol/L),0.33,pH,11.2,leachTime (hr),28,69.5,64.1,16295,20009,26155,121,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),120,cyanideConc (mol/L),0.45,pH,10,leachTime (hr),42,65.9,59.9,16875,20717,26856,125,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),480,cyanideConc (mol/L),0.22,pH,13,leachTime (hr),12,86.5,77.7,14020,17457,22338,107,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),160,cyanideConc (mol/L),0.38,pH,10.8,leachTime (hr),33,66.3,62.3,16710,20244,25792,122,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),280,cyanideConc (mol/L),0.29,pH,11.7,leachTime (hr),21,75.4,66,15864,19448,24695,114,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),350,cyanideConc (mol/L),0.26,pH,12.2,leachTime (hr),17,79.7,71.1,15170,18505,23690,115,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),130,cyanideConc (mol/L),0.42,pH,10.3,leachTime (hr),39,67.4,59.3,16937,20630,26905,124,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),550,cyanideConc (mol/L),0.2,pH,13.5,leachTime (hr),10,90.4,83.6,13327,16674,21498,105,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),220,cyanideConc (mol/L),0.32,pH,11.3,leachTime (hr),26,71.7,65,16080,19679,25520,122,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),300,cyanideConc (mol/L),0.28,pH,11.8,leachTime (hr),20,76.5,67.5,15515,18907,24552,115,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),600,cyanideConc (mol/L),0.18,pH,14,leachTime (hr),8,91.1,84.5,12875,16118,21072,98,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),140,cyanideConc (mol/L),0.41,pH,10.6,leachTime (hr),37,67.5,59,16931,20723,26678,122,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),420,cyanideConc (mol/L),0.24,pH,12.7,leachTime (hr),14,82.7,76,14692,17797,22637,109,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),170,cyanideConc (mol/L),0.36,pH,10.9,leachTime (hr),31,68.1,62.2,16733,20264,26043,121,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Silver Leaching,oreGrade (g/t Ag),260,cyanideConc (mol/L),0.3,pH,11.6,leachTime (hr),22,75,66.1,15895,19193,24936,120,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.5,temperature (degC),160,pressure (bar),50,H₂SO₄ Conc (mol/L),1.5,68.5,63.1,16.1,40.4,57.9,12,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.8,temperature (degC),170,pressure (bar),60,H₂SO₄ Conc (mol/L),1.8,78.2,70.4,15,37.3,53.4,10.7,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),1.2,temperature (degC),180,pressure (bar),70,H₂SO₄ Conc (mol/L),2,89.1,81.9,13.6,33.5,47.2,10,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.4,temperature (degC),155,pressure (bar),45,H₂SO₄ Conc (mol/L),1.3,64.1,59.7,16.8,40.9,59.2,12.2,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),1.5,temperature (degC),185,pressure (bar),75,H₂SO₄ Conc (mol/L),2.2,97.1,89.6,11.8,29.9,42.1,9.3,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.7,temperature (degC),165,pressure (bar),55,H₂SO₄ Conc (mol/L),1.7,75.1,68.6,14.9,37.6,54.9,11.3,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.3,temperature (degC),150,pressure (bar),40,H₂SO₄ Conc (mol/L),1.2,62,58,16.4,42,60.3,12.1,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),1.8,temperature (degC),190,pressure (bar),80,H₂SO₄ Conc (mol/L),2.5,99,96.9,11.2,27.2,37.7,8.5,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.6,temperature (degC),162,pressure (bar),52,H₂SO₄ Conc (mol/L),1.6,71.3,65.3,15.7,38.9,55.8,11.7,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),1,temperature (degC),175,pressure (bar),65,H₂SO₄ Conc (mol/L),1.9,83.6,75.9,14,34.7,50.1,10.5,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),1.3,temperature (degC),182,pressure (bar),72,H₂SO₄ Conc (mol/L),2.1,94.7,83.4,13.3,32.2,45.3,9.8,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.45,temperature (degC),157,pressure (bar),47,H₂SO₄ Conc (mol/L),1.4,67.6,61.5,15.7,40.6,58.2,12.1,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),2,temperature (degC),195,pressure (bar),85,H₂SO₄ Conc (mol/L),2.8,99,97,10.1,24.9,35.1,8.1,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.9,temperature (degC),172,pressure (bar),62,H₂SO₄ Conc (mol/L),1.8,81.9,74.2,14.6,36.3,51.6,11,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),1.1,temperature (degC),178,pressure (bar),68,H₂SO₄ Conc (mol/L),2,88,78.4,13.5,34.1,48.7,10,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),2.5,temperature (degC),200,pressure (bar),90,H₂SO₄ Conc (mol/L),3,99,97,7.7,19.6,27.5,7,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.35,temperature (degC),152,pressure (bar),43,H₂SO₄ Conc (mol/L),1.25,63.4,58.7,16.9,41.3,60.1,12.1,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),1.6,temperature (degC),187,pressure (bar),77,H₂SO₄ Conc (mol/L),2.3,99,92,11.4,28.6,41.5,8.8,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),0.55,temperature (degC),160,pressure (bar),50,H₂SO₄ Conc (mol/L),1.5,71.5,64.6,16,40,57.2,11.8,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Cobalt Leaching (PAL),coGrade (%),1.4,temperature (degC),183,pressure (bar),73,H₂SO₄ Conc (mol/L),2.15,95.3,87.1,11.9,31,44,9.6,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),65,temperature (degC),1200,O2 Enrichment (%),18,recoveryTarget (%),92,81.3,74,0.61,13.7,22.8,1.68,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),68,temperature (degC),1250,O2 Enrichment (%),15,recoveryTarget (%),90,82,75.5,0.59,13.3,22.4,1.63,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),72,temperature (degC),1300,O2 Enrichment (%),12,recoveryTarget (%),88,86.4,78.5,0.56,12.5,21.8,1.64,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),60,temperature (degC),1150,O2 Enrichment (%),22,recoveryTarget (%),95,78,74,0.6,14.3,23.6,1.75,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),75,temperature (degC),1350,O2 Enrichment (%),10,recoveryTarget (%),85,88.3,80.5,0.58,12.2,21.7,1.55,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),63,temperature (degC),1220,O2 Enrichment (%),17,recoveryTarget (%),91,79.4,74,0.61,13.6,23.6,1.69,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),58,temperature (degC),1100,O2 Enrichment (%),25,recoveryTarget (%),97,78,74,0.64,14.5,23.9,1.79,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),78,temperature (degC),1380,O2 Enrichment (%),8,recoveryTarget (%),83,90,83.1,0.54,11.8,20.9,1.52,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),55,temperature (degC),1080,O2 Enrichment (%),28,recoveryTarget (%),100,78,74,0.64,14.7,24.6,1.79,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),80,temperature (degC),1400,O2 Enrichment (%),6,recoveryTarget (%),80,91.8,83.1,0.52,11.7,20.5,1.53,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),66,temperature (degC),1240,O2 Enrichment (%),16,recoveryTarget (%),91,81.1,74,0.61,13.2,22.7,1.71,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),61,temperature (degC),1160,O2 Enrichment (%),21,recoveryTarget (%),94,78,74,0.6,13.7,23.5,1.72,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),52,temperature (degC),1060,O2 Enrichment (%),30,recoveryTarget (%),103,78,74,0.63,15.2,24.8,1.84,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),82,temperature (degC),1420,O2 Enrichment (%),5,recoveryTarget (%),78,92,84.1,0.54,11.4,20.6,1.49,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),70,temperature (degC),1280,O2 Enrichment (%),13,recoveryTarget (%),88,84.9,76.3,0.56,12.8,22.6,1.61,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),85,temperature (degC),1450,O2 Enrichment (%),4,recoveryTarget (%),75,95.4,87.9,0.52,11,20.3,1.43,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),57,temperature (degC),1090,O2 Enrichment (%),26,recoveryTarget (%),98,78,74,0.64,14.4,24.5,1.76,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),76,temperature (degC),1360,O2 Enrichment (%),9,recoveryTarget (%),84,87.7,80.9,0.54,12,21.5,1.56,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),64,temperature (degC),1230,O2 Enrichment (%),17,recoveryTarget (%),91,80,74,0.6,13.5,23.3,1.68,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Lead Smelting,pbGrade (%),73,temperature (degC),1310,O2 Enrichment (%),11,recoveryTarget (%),87,86.8,79.1,0.57,12.6,22,1.58,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.2,temperature (degC),250,pressure (bar),45,H₂SO₄ Conc (mol/L),1.8,80.2,71.6,42.7,45.3,153.7,15.2,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.5,temperature (degC),260,pressure (bar),50,H₂SO₄ Conc (mol/L),2,87,79,39.7,42.3,146.7,14.2,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.8,temperature (degC),270,pressure (bar),55,H₂SO₄ Conc (mol/L),2.2,95.1,83.4,36.2,41.1,137.2,13.6,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1,temperature (degC),240,pressure (bar),40,H₂SO₄ Conc (mol/L),1.5,75.5,68.1,44.7,46.2,159.4,16.1,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),2,temperature (degC),280,pressure (bar),60,H₂SO₄ Conc (mol/L),2.5,99.9,90.3,35.4,39.9,130.4,12.9,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.3,temperature (degC),255,pressure (bar),47,H₂SO₄ Conc (mol/L),1.9,83.1,73.8,42.3,44,149.4,15.3,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),0.8,temperature (degC),230,pressure (bar),35,H₂SO₄ Conc (mol/L),1.3,69.8,64.2,47.1,49.2,167.4,16.9,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),2.2,temperature (degC),285,pressure (bar),65,H₂SO₄ Conc (mol/L),2.8,99.9,93.3,33.3,36.5,125.7,12.6,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.1,temperature (degC),245,pressure (bar),42,H₂SO₄ Conc (mol/L),1.6,77.1,69.2,44.4,45.8,156.4,15.4,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.7,temperature (degC),268,pressure (bar),53,H₂SO₄ Conc (mol/L),2.1,93.2,83,37.8,40.7,139.5,13.6,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.9,temperature (degC),275,pressure (bar),58,H₂SO₄ Conc (mol/L),2.3,97.4,86,35.8,39.5,132.5,13.4,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),0.9,temperature (degC),235,pressure (bar),38,H₂SO₄ Conc (mol/L),1.4,73.5,65.9,45.2,46.9,161.6,16.4,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),2.5,temperature (degC),290,pressure (bar),70,H₂SO₄ Conc (mol/L),3,99.9,96,30.3,35,114.8,11.4,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.4,temperature (degC),258,pressure (bar),49,H₂SO₄ Conc (mol/L),1.95,85.9,75.5,40.9,43.4,148.7,14.8,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.6,temperature (degC),265,pressure (bar),52,H₂SO₄ Conc (mol/L),2.05,90.3,79.4,38.8,42.4,140,14.1,Warning,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),3,temperature (degC),300,pressure (bar),75,H₂SO₄ Conc (mol/L),3.5,99.9,96,24.5,30.7,98,10.1,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),0.7,temperature (degC),225,pressure (bar),33,H₂SO₄ Conc (mol/L),1.2,66.6,60.8,48.4,49.4,170.3,17.1,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),2.3,temperature (degC),287,pressure (bar),67,H₂SO₄ Conc (mol/L),2.9,99.9,95.9,31.1,35.6,122.7,12.3,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),1.05,temperature (degC),242,pressure (bar),41,H₂SO₄ Conc (mol/L),1.55,76.7,69.2,44.9,46.4,157,15.6,Alert,Sample research papers/all_processes_dataset.xlsx.pdf
+Nickel Laterite (HPAL),niGrade (%),2.1,temperature (degC),282,pressure (bar),62,H₂SO₄ Conc (mol/L),2.6,99.9,91.9,34.2,38.9,128.7,12.5,Optimal,Sample research papers/all_processes_dataset.xlsx.pdf

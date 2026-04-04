@@ -14,7 +14,7 @@ Before starting, ensure you have:
 
 ### 1ï¸âƒ£ Navigate to Project Directory
 ```bash
-cd "C:\Users\soumi\OneDrive\Desktop\AI in Extractive Metallurgy"
+cd "C:\Users\soumi\OneDrive\Desktop\AI/ML in Extractive Metallurgy"
 ```
 
 ### 2ï¸âƒ£ Install Dependencies
@@ -92,8 +92,8 @@ You'll know it's working when:
    - Temperature: 70
    - Pressure: 2.5
    - Issues: "Slow leaching"
-3. Click "Get AI Recommendations"
-4. Wait for AI response (10-30 seconds)
+3. Click "Get AI/ML Recommendations"
+4. Wait for AI/ML response (10-30 seconds)
 5. You should see recommendations appear
 
 ### Test 3: Predict Recovery
@@ -105,7 +105,7 @@ You'll know it's working when:
    - Chem. Concentration: 15
    - pH: 1.5
 3. Click "Predict Recovery Rate"
-4. See AI prediction
+4. See AI/ML prediction
 
 ### Test 4: Environmental Analysis
 1. Click "Environmental Impact" tab
@@ -263,7 +263,7 @@ Creates `dist/` folder with production files ready to deploy.
 
 1. âœ… Run the app successfully
 2. âœ… Test all four main pages
-3. âœ… Try using AI recommendations with real data
+3. âœ… Try using AI/ML recommendations with real data
 4. âœ… Document results for your report
 5. âœ… Customize for your specific metallurgy process
 6. âœ… Write your handwritten report
@@ -295,9 +295,10 @@ npm install
 
 ## ðŸŽ¯ Your Project Is Ready! ðŸŽ‰
 
-You now have a fully functional AI-driven extractive metallurgy dashboard.
+You now have a fully functional AI/ML-driven extractive metallurgy dashboard.
 
 **Next:** Follow the QUICKSTART.md for rapid testing, or start writing your report using REPORT_GUIDELINES.md.
 
 Good luck with your project! ðŸš€
+
 

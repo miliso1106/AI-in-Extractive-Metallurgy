@@ -1,10 +1,10 @@
-﻿# AI-Driven Extractive Metallurgy Dashboard
+﻿# AI/ML-Driven Extractive Metallurgy Dashboard
 
 ## 📋 Project Overview
 
 A modern, interactive dashboard for optimizing extractive metallurgy processes using AI/ML technologies. The application leverages the Open Router API to provide real-time recommendations for process optimization, recovery rate predictions, and environmental impact analysis.
 
-**Project Goal:** Increase extraction process efficiency through AI-powered insights and recommendations.
+**Project Goal:** Increase extraction process efficiency through AI/ML-powered insights and recommendations.
 
 ---
 
@@ -18,20 +18,20 @@ A modern, interactive dashboard for optimizing extractive metallurgy processes u
 
 ### 2. **Process Analyzer**
    - Input custom process parameters (temperature, pressure, efficiency, issues)
-   - Get AI-powered optimization recommendations
+   - Get AI/ML-powered optimization recommendations
    - Identify bottlenecks and improvement opportunities
    - Expected efficiency gains calculation
 
 ### 3. **Recovery Rate Prediction**
    - Predict metal recovery rates based on leaching parameters
    - Analyze ore grade, temperature, pH, and chemical concentration
-   - AI confidence levels for predictions
+   - AI/ML confidence levels for predictions
    - Risk factor assessment
 
 ### 4. **Environmental Impact Analysis**
    - Assess waste generation, water usage, and energy consumption
    - Calculate CO2 emissions footprint
-   - Get sustainability recommendations from AI
+   - Get sustainability recommendations from AI/ML
    - Cost-benefit analysis for improvements
 
 ---
@@ -52,8 +52,8 @@ A modern, interactive dashboard for optimizing extractive metallurgy processes u
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/miliso1106/AI-in-Extractive-Metallurgy.git
-cd AI-in-Extractive-Metallurgy
+git clone https://github.com/miliso1106/AI/ML-in-Extractive-Metallurgy.git
+cd AI/ML-in-Extractive-Metallurgy
 ```
 
 ### 2. Install Dependencies
@@ -111,7 +111,7 @@ npm run build
 
 ---
 
-## 🧠 AI Integration
+## 🧠 AI/ML Integration
 
 The dashboard uses Open Router API to access various LLMs for:
 
@@ -207,8 +207,8 @@ Edit `src/services/openRouterService.js` to customize:
    - Temperature: 70°C
    - Pressure: 2.5 atm
    - Issues: "Slow leaching rate"
-3. Click "Get AI Recommendations"
-4. View detailed AI suggestions
+3. Click "Get AI/ML Recommendations"
+4. View detailed AI/ML suggestions
 
 ### Example 2: Predict Gold Recovery
 1. Navigate to "Recovery Prediction"
@@ -224,7 +224,7 @@ Edit `src/services/openRouterService.js` to customize:
 ### Example 3: Environmental Assessment
 1. Navigate to "Environmental Impact"
 2. Enter current metric values
-3. Get AI recommendations for sustainability improvements
+3. Get AI/ML recommendations for sustainability improvements
 4. Review cost-benefit analysis
 
 ---
@@ -325,6 +325,8 @@ For issues or questions:
 **Created:** April 2026
 **Project Type:** Educational - AI/ML Application
 **Status:** Development ✅
-# AI-in-Extractive-Metallurgy
+# AI/ML-in-Extractive-Metallurgy
+
+
 
 

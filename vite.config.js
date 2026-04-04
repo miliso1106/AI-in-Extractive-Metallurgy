@@ -73,7 +73,7 @@ const openRouterDev = () => ({
         } catch (error) {
           res.statusCode = 500
           res.setHeader('Content-Type', 'application/json')
-          res.end(JSON.stringify({ error: 'Failed to call AI service.' }))
+          res.end(JSON.stringify({ error: 'Failed to call AI/ML service.' }))
         }
       })
     })
@@ -85,5 +85,18 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true
-  }
+  },
+  build: {
+    chunkSizeWarningLimit: 700,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          charts: ['recharts'],
+          icons: ['lucide-react'],
+        },
+      },
+    },
+  },
 })
+

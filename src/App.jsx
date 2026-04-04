@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import Header from './components/Header';
-import Dashboard from './pages/Dashboard';
-import ProcessAnalyzer from './pages/ProcessAnalyzer';
-import EnvironmentalImpact from './pages/EnvironmentalImpact';
-import RecoveryPrediction from './pages/RecoveryPrediction';
-import ProcessDataPage from './pages/ProcessDataPage';
-import MLPrediction from './pages/MLPrediction';
+
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const ProcessAnalyzer = lazy(() => import('./pages/ProcessAnalyzer'));
+const EnvironmentalImpact = lazy(() => import('./pages/EnvironmentalImpact'));
+const RecoveryPrediction = lazy(() => import('./pages/RecoveryPrediction'));
+const ProcessDataPage = lazy(() => import('./pages/ProcessDataPage'));
+const MLPrediction = lazy(() => import('./pages/MLPrediction'));
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -31,7 +32,9 @@ function App() {
     <div className="dashboard-container min-h-screen">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <main className="p-4 md:p-8">
-        {renderPage()}
+        <Suspense fallback={<div className="text-slate-300">Loading page...</div>}>
+          {renderPage()}
+        </Suspense>
       </main>
     </div>
   );

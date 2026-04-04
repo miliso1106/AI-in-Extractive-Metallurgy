@@ -1,0 +1,513 @@
+{
+  "generatedAt": "2026-04-04T05:14:57.239248+00:00",
+  "model_family": "per_process_best_candidate",
+  "feature_keys": [
+    "condition_1_value",
+    "condition_2_value",
+    "condition_3_value",
+    "condition_4_value"
+  ],
+  "target_key": "recoveryRate",
+  "processes": {
+    "Aluminum Bauxite (Bayer)": {
+      "model_type": "linear_regression",
+      "best_candidate": "xgboost",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "Al2O3 Grade (%)",
+        "temperature (degC)",
+        "pressure (bar)",
+        "(mol/L)"
+      ],
+      "intercept": -147.5977678727545,
+      "coefficients": [
+        0.23576916251679064,
+        1.376975483438239,
+        -1.0122135366834,
+        4.159185951017275
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 34.0,
+          "max": 60.0
+        },
+        {
+          "key": "condition_2_value",
+          "min": 142.0,
+          "max": 185.0
+        },
+        {
+          "key": "condition_3_value",
+          "min": 20.0,
+          "max": 42.0
+        },
+        {
+          "key": "condition_4_value",
+          "min": 3.5,
+          "max": 8.0
+        }
+      ],
+      "metrics": {
+        "mae": 1.5270286560058608,
+        "r2": 0.9541042113348732
+      },
+      "samples": 20
+    },
+    "Cobalt Leaching (PAL)": {
+      "model_type": "linear_regression",
+      "best_candidate": "random_forest",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "coGrade (%)",
+        "temperature (degC)",
+        "pressure (bar)",
+        "H\u2082SO\u2084 Conc (mol/L)"
+      ],
+      "intercept": -118.46395686845514,
+      "coefficients": [
+        9.8728437520331,
+        1.3826430240800474,
+        -0.05494419535291395,
+        -23.512542163798663
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 0.3,
+          "max": 2.5
+        },
+        {
+          "key": "condition_2_value",
+          "min": 150.0,
+          "max": 200.0
+        },
+        {
+          "key": "condition_3_value",
+          "min": 40.0,
+          "max": 90.0
+        },
+        {
+          "key": "condition_4_value",
+          "min": 1.2,
+          "max": 3.0
+        }
+      ],
+      "metrics": {
+        "mae": 1.4708333333334203,
+        "r2": 0.9850866691648098
+      },
+      "samples": 20
+    },
+    "Copper Flotation": {
+      "model_type": "linear_regression",
+      "best_candidate": "random_forest",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "oreGrade (% Cu)",
+        "temperature (degC)",
+        "pH",
+        "reagentDosage (g/t)"
+      ],
+      "intercept": 1.9737958259649702,
+      "coefficients": [
+        12.439668907605489,
+        2.2117675676851105,
+        1.8061657848075678,
+        -2.7430338421140172
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 0.8,
+          "max": 4.0
+        },
+        {
+          "key": "condition_2_value",
+          "min": 28.0,
+          "max": 47.0
+        },
+        {
+          "key": "condition_3_value",
+          "min": 6.5,
+          "max": 10.0
+        },
+        {
+          "key": "condition_4_value",
+          "min": 10.0,
+          "max": 27.0
+        }
+      ],
+      "metrics": {
+        "mae": 1.238416666666641,
+        "r2": 0.9665265561415123
+      },
+      "samples": 20
+    },
+    "Copper Heap Leach": {
+      "model_type": "linear_regression",
+      "best_candidate": "random_forest",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "oreGrade (g/t Cu)",
+        "temperature (degC)",
+        "pressure (atm)",
+        "leachingTime (hr)"
+      ],
+      "intercept": 202.67550258448122,
+      "coefficients": [
+        24.316817086739317,
+        -1.8430939456879967,
+        -0.06680174205295325,
+        -0.10330391406364403
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 1.5,
+          "max": 3.5
+        },
+        {
+          "key": "condition_2_value",
+          "min": 48.0,
+          "max": 75.0
+        },
+        {
+          "key": "condition_3_value",
+          "min": 1.1,
+          "max": 1.6
+        },
+        {
+          "key": "condition_4_value",
+          "min": 600.0,
+          "max": 816.0
+        }
+      ],
+      "metrics": {
+        "mae": 1.149416666666614,
+        "r2": 0.9406868991081648
+      },
+      "samples": 20
+    },
+    "Gold Cyanidation": {
+      "model_type": "linear_regression",
+      "best_candidate": "linear_regression",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "oreGrade (g/t Au)",
+        "cyanideConc (mol/L)",
+        "pH",
+        "leachTime (hr)"
+      ],
+      "intercept": 31.4032709599271,
+      "coefficients": [
+        5.862288803410218,
+        617.9672545360177,
+        -0.19672143595208524,
+        -0.3133616369561878
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 1.2,
+          "max": 8.0
+        },
+        {
+          "key": "condition_2_value",
+          "min": 0.03,
+          "max": 0.08
+        },
+        {
+          "key": "condition_3_value",
+          "min": 9.0,
+          "max": 12.5
+        },
+        {
+          "key": "condition_4_value",
+          "min": 10.0,
+          "max": 45.0
+        }
+      ],
+      "metrics": {
+        "mae": 0.32502780752593097,
+        "r2": 0.9962388065248147
+      },
+      "samples": 20
+    },
+    "Iron Magnetite": {
+      "model_type": "linear_regression",
+      "best_candidate": "xgboost",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "Fe Grade (%)",
+        "grindSize (mm)",
+        "magneticIntensity (Oe)",
+        "feedRate (t/hr)"
+      ],
+      "intercept": 182.13468830004803,
+      "coefficients": [
+        0.7080656109230291,
+        -149.28661602447494,
+        -0.00020661172683844597,
+        -1.1509445739412025
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 43.0,
+          "max": 75.0
+        },
+        {
+          "key": "condition_2_value",
+          "min": 0.08,
+          "max": 0.5
+        },
+        {
+          "key": "condition_3_value",
+          "min": 7000.0,
+          "max": 32000.0
+        },
+        {
+          "key": "condition_4_value",
+          "min": 68.0,
+          "max": 115.0
+        }
+      ],
+      "metrics": {
+        "mae": 0.37863082885742116,
+        "r2": 0.9006479313963281
+      },
+      "samples": 20
+    },
+    "Lead Smelting": {
+      "model_type": "linear_regression",
+      "best_candidate": "linear_regression",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "pbGrade (%)",
+        "temperature (degC)",
+        "O2 Enrichment (%)",
+        "recoveryTarget (%)"
+      ],
+      "intercept": -115.19921601268236,
+      "coefficients": [
+        1.1257796627753716,
+        0.05410703882950912,
+        1.115070372997215,
+        0.41710585813300216
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 52.0,
+          "max": 85.0
+        },
+        {
+          "key": "condition_2_value",
+          "min": 1060.0,
+          "max": 1450.0
+        },
+        {
+          "key": "condition_3_value",
+          "min": 4.0,
+          "max": 30.0
+        },
+        {
+          "key": "condition_4_value",
+          "min": 75.0,
+          "max": 103.0
+        }
+      ],
+      "metrics": {
+        "mae": 0.8326877184301225,
+        "r2": 0.9701809472647948
+      },
+      "samples": 20
+    },
+    "Nickel Laterite (HPAL)": {
+      "model_type": "linear_regression",
+      "best_candidate": "random_forest",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "niGrade (%)",
+        "temperature (degC)",
+        "pressure (bar)",
+        "H\u2082SO\u2084 Conc (mol/L)"
+      ],
+      "intercept": -124.1889045836748,
+      "coefficients": [
+        11.22125751605848,
+        0.9933811401489567,
+        -0.8955524714055942,
+        -9.395042839291383
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 0.7,
+          "max": 3.0
+        },
+        {
+          "key": "condition_2_value",
+          "min": 225.0,
+          "max": 300.0
+        },
+        {
+          "key": "condition_3_value",
+          "min": 33.0,
+          "max": 75.0
+        },
+        {
+          "key": "condition_4_value",
+          "min": 1.2,
+          "max": 3.5
+        }
+      ],
+      "metrics": {
+        "mae": 0.3148333333329987,
+        "r2": 0.9971778339469644
+      },
+      "samples": 20
+    },
+    "Silver Leaching": {
+      "model_type": "linear_regression",
+      "best_candidate": "xgboost",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "oreGrade (g/t Ag)",
+        "cyanideConc (mol/L)",
+        "pH",
+        "leachTime (hr)"
+      ],
+      "intercept": 88.30691795808569,
+      "coefficients": [
+        0.06824511225655659,
+        25.952705737117768,
+        -2.7802873930537517,
+        -0.33869556545006674
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 120.0,
+          "max": 600.0
+        },
+        {
+          "key": "condition_2_value",
+          "min": 0.18,
+          "max": 0.45
+        },
+        {
+          "key": "condition_3_value",
+          "min": 10.0,
+          "max": 14.0
+        },
+        {
+          "key": "condition_4_value",
+          "min": 8.0,
+          "max": 42.0
+        }
+      ],
+      "metrics": {
+        "mae": 0.8419712066650362,
+        "r2": 0.9877874702408554
+      },
+      "samples": 20
+    },
+    "Zinc Roasting": {
+      "model_type": "linear_regression",
+      "best_candidate": "xgboost",
+      "features": [
+        "condition_1_value",
+        "condition_2_value",
+        "condition_3_value",
+        "condition_4_value"
+      ],
+      "feature_labels": [
+        "Zn Grade (%)",
+        "temperature (degC)",
+        "SO2 Concentration (%)",
+        "feedRate (t/hr)"
+      ],
+      "intercept": -121.9642859879036,
+      "coefficients": [
+        -0.2245348395836422,
+        0.23886566907764356,
+        0.6266993779288368,
+        -1.6060777014360117
+      ],
+      "ranges": [
+        {
+          "key": "condition_1_value",
+          "min": 44.0,
+          "max": 70.0
+        },
+        {
+          "key": "condition_2_value",
+          "min": 820.0,
+          "max": 1020.0
+        },
+        {
+          "key": "condition_3_value",
+          "min": 3.0,
+          "max": 17.0
+        },
+        {
+          "key": "condition_4_value",
+          "min": 2.3,
+          "max": 4.5
+        }
+      ],
+      "metrics": {
+        "mae": 0.5539718627929666,
+        "r2": 0.9908904827283409
+      },
+      "samples": 20
+    }
+  }
+}

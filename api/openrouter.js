@@ -1,4 +1,4 @@
-import { OPENROUTER_BASE_URL, buildPrompt, extractFirstJsonObject } from './openrouter.shared.js';
+﻿import { OPENROUTER_BASE_URL, buildPrompt, extractFirstJsonObject } from './openrouter.shared.js';
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 
@@ -53,6 +53,7 @@ export default async function handler(req, res) {
 
     return jsonResponse(res, 200, { ok: true, data: content });
   } catch (error) {
-    return jsonResponse(res, 500, { error: 'Failed to call AI service.' });
+    return jsonResponse(res, 500, { error: 'Failed to call AI/ML service.' });
   }
 }
+

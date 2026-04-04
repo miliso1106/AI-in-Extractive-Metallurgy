@@ -21,10 +21,10 @@ const numericFields = [
 
 const headerAliases = {
   processName: ['processname', 'process', 'processtype'],
-  oreGrade: ['oregrade', 'ore', 'grade'],
-  temperature: ['temperature', 'temp', 'tempc'],
-  pressure: ['pressure', 'press'],
-  leachingTime: ['leachingtime', 'leachtime', 'time'],
+  oreGrade: ['oregrade', 'ore', 'grade', 'condition1value'],
+  temperature: ['temperature', 'temp', 'tempc', 'condition2value'],
+  pressure: ['pressure', 'press', 'condition3value'],
+  leachingTime: ['leachingtime', 'leachtime', 'time', 'condition4value'],
   recoveryRate: ['recoveryrate', 'recovery', 'recoverypct'],
   efficiency: ['efficiency', 'eff', 'efficiencypct'],
   wasteGenerated: ['wastegenerated', 'waste'],
@@ -315,7 +315,7 @@ const ProcessDataPage = () => {
           setAnalysisTable(result.data);
           setAnalysisRaw('');
         } else {
-          setAnalysisError('AI response was not valid JSON. Showing raw response below.');
+          setAnalysisError('AI/ML response was not valid JSON. Showing raw response below.');
           setAnalysisRaw(result.raw || '');
         }
       }
@@ -469,10 +469,10 @@ const ProcessDataPage = () => {
         </div>
       </div>
 
-      {/* AI Analysis */}
+      {/* AI/ML Analysis */}
       <div className="card">
         <div className="card-header">
-          <h2 className="text-xl font-semibold text-white">AI Insights Table</h2>
+          <h2 className="text-xl font-semibold text-white">AI/ML Insights Table</h2>
           <p className="text-slate-400 text-sm mt-1">Generates a concise table of recommendations from the uploaded data.</p>
         </div>
         <div className="card-body space-y-4">
@@ -498,7 +498,7 @@ const ProcessDataPage = () => {
               <div className="font-semibold">{rowCount || data.length}</div>
             </div>
             <div className="bg-slate-800 p-3 rounded border border-slate-700">
-              <div className="text-slate-400">Rows Sent to AI</div>
+              <div className="text-slate-400">Rows Sent to AI/ML</div>
               <div className="font-semibold">{sampleCount || Math.min((rowCount || data.length), 25)}</div>
             </div>
           </div>
@@ -527,7 +527,7 @@ const ProcessDataPage = () => {
             className="btn-primary w-full flex items-center justify-center gap-2"
           >
             <Wand2 size={18} />
-            {isAnalyzing ? 'Analyzing...' : (explanationMode ? 'Answer Question' : 'Analyze Dataset with AI')}
+            {isAnalyzing ? 'Analyzing...' : (explanationMode ? 'Answer Question' : 'Analyze Dataset with AI/ML')}
           </button>
 
           {analysisError && (
@@ -540,13 +540,13 @@ const ProcessDataPage = () => {
             <SimpleTable
               columns={analysisTable.columns}
               rows={analysisTable.rows}
-              emptyMessage="No AI insights returned."
+              emptyMessage="No AI/ML insights returned."
             />
           )}
 
           {!analysisTable && analysisRaw && (
             <div className="bg-slate-700 p-4 rounded-lg">
-              <h3 className="font-semibold text-white mb-3">AI Response (Raw)</h3>
+              <h3 className="font-semibold text-white mb-3">AI/ML Response (Raw)</h3>
               <p className="text-sm text-slate-200 whitespace-pre-wrap">{analysisRaw}</p>
             </div>
           )}
@@ -601,5 +601,6 @@ const ProcessDataPage = () => {
 };
 
 export default ProcessDataPage;
+
 
 

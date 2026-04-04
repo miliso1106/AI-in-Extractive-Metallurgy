@@ -58,7 +58,7 @@ const RecoveryPrediction = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
           Recovery Rate Prediction
         </h1>
-        <p className="text-slate-400">AI-powered predictions for metal recovery rates based on process parameters</p>
+        <p className="text-slate-400">AI/ML-powered predictions for metal recovery rates based on process parameters</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -201,7 +201,7 @@ const RecoveryPrediction = () => {
                 ) : null}
 
                 <div className="bg-slate-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-white mb-3">AI Analysis</h3>
+                  <h3 className="font-semibold text-white mb-3">AI/ML Analysis</h3>
                   <p className="text-sm text-slate-200 whitespace-pre-wrap">
                     {prediction}
                   </p>
@@ -211,7 +211,7 @@ const RecoveryPrediction = () => {
               <div className="flex flex-col items-center justify-center h-64 text-center">
                 <p className="text-slate-400">
                   {loading
-                    ? 'AI is generating your recovery prediction...'
+                    ? 'AI/ML is generating your recovery prediction...'
                     : 'Fill in the parameters and click "Predict Recovery Rate" to see results'}
                 </p>
               </div>
@@ -224,3 +224,4 @@ const RecoveryPrediction = () => {
 };
 
 export default RecoveryPrediction;
+

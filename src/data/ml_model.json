@@ -1,0 +1,20 @@
+{
+  "model_type": "linear_regression",
+  "features": [
+    "condition_1_value",
+    "condition_2_value",
+    "condition_3_value",
+    "condition_4_value"
+  ],
+  "intercept": 78.82116310847326,
+  "coefficients": [
+    -0.01491738577397025,
+    0.0059053537702733324,
+    0.0001347521244905994,
+    -0.011245129426503584
+  ],
+  "metrics": {
+    "mae": 8.048096896468582,
+    "r2": 0.04169762349009776
+  }
+}

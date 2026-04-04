@@ -65,7 +65,7 @@ const EnvironmentalImpact = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
           Environmental Impact Analysis
         </h1>
-        <p className="text-slate-400">AI-driven analysis of your process's environmental footprint</p>
+        <p className="text-slate-400">AI/ML-driven analysis of your process's environmental footprint</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -208,7 +208,7 @@ const EnvironmentalImpact = () => {
                   </div>
                 ) : (
                   <div className="bg-slate-700 p-4 rounded-lg">
-                    <h3 className="font-semibold text-white mb-3">AI Recommendations</h3>
+                    <h3 className="font-semibold text-white mb-3">AI/ML Recommendations</h3>
                     <p className="text-sm text-slate-200 whitespace-pre-wrap">
                       {analysis}
                     </p>
@@ -219,7 +219,7 @@ const EnvironmentalImpact = () => {
               <div className="flex flex-col items-center justify-center h-64 text-center">
                 <p className="text-slate-400">
                   {loading
-                    ? 'AI is analyzing environmental impact...'
+                    ? 'AI/ML is analyzing environmental impact...'
                     : 'Fill in your process metrics and click "Analyze Environmental Impact" to see sustainability recommendations'}
                 </p>
               </div>
@@ -232,3 +232,4 @@ const EnvironmentalImpact = () => {
 };
 
 export default EnvironmentalImpact;
+
