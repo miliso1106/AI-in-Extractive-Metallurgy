@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { getProcessOptimization } from '../services/openRouterService';
 import { Loader, Send } from 'lucide-react';
 
@@ -14,6 +14,24 @@ const ProcessAnalyzer = () => {
   const [loading, setLoading] = useState(false);
   const [recommendations, setRecommendations] = useState(null);
   const [error, setError] = useState(null);
+
+  const parsedRecommendations = useMemo(() => {
+    if (!recommendations) return null;
+    try {
+      return JSON.parse(recommendations);
+    } catch {
+      return null;
+    }
+  }, [recommendations]);
+
+  const recommendationItems = useMemo(() => {
+    const recs = parsedRecommendations?.recommendations;
+    if (Array.isArray(recs)) return recs.filter(Boolean);
+    if (typeof recs === 'string') {
+      return recs.split('\n').map((line) => line.trim()).filter(Boolean);
+    }
+    return null;
+  }, [parsedRecommendations]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -156,11 +174,51 @@ const ProcessAnalyzer = () => {
 
             {recommendations ? (
               <div className="space-y-4 text-white">
-                <div className="bg-slate-700 p-4 rounded-lg">
-                  <p className="whitespace-pre-wrap text-sm text-slate-200">
-                    {recommendations}
-                  </p>
-                </div>
+                {parsedRecommendations ? (
+                  <>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-slate-700 p-4 rounded-lg">
+                        <p className="text-xs text-slate-400">Expected Improvement</p>
+                        <p className="text-lg font-semibold text-green-300">
+                          {parsedRecommendations.expectedImprovement || 'N/A'}
+                        </p>
+                      </div>
+                      <div className="bg-slate-700 p-4 rounded-lg">
+                        <p className="text-xs text-slate-400">Implementation Timeline</p>
+                        <p className="text-lg font-semibold text-blue-300">
+                          {parsedRecommendations.timeline || 'N/A'}
+                        </p>
+                      </div>
+                    </div>
+
+                    {recommendationItems && (
+                      <div className="bg-slate-700 p-4 rounded-lg">
+                        <h3 className="font-semibold text-white mb-3">Recommendations</h3>
+                        <ul className="space-y-2 text-sm text-slate-200">
+                          {recommendationItems.map((item, idx) => (
+                            <li key={`${idx}`} className="flex gap-2">
+                              <span className="text-blue-400">-</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    <div className="bg-slate-700 p-4 rounded-lg">
+                      <h3 className="font-semibold text-white mb-3">Risk Factors</h3>
+                      <p className="text-sm text-slate-200 whitespace-pre-wrap">
+                        {parsedRecommendations.risks || 'N/A'}
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <div className="bg-slate-700 p-4 rounded-lg">
+                    <p className="whitespace-pre-wrap text-sm text-slate-200">
+                      {recommendations}
+                    </p>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center h-64 text-center">

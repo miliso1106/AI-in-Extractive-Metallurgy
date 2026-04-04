@@ -14,6 +14,15 @@ const EnvironmentalImpact = () => {
   const [analysis, setAnalysis] = useState(null);
   const [error, setError] = useState(null);
 
+  const parsedAnalysis = useMemo(() => {
+    if (!analysis) return null;
+    try {
+      return JSON.parse(analysis);
+    } catch {
+      return null;
+    }
+  }, [analysis]);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -176,12 +185,35 @@ const EnvironmentalImpact = () => {
                   })}
                 </div>
 
-                <div className="bg-slate-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-white mb-3">AI Recommendations</h3>
-                  <p className="text-sm text-slate-200 whitespace-pre-wrap">
-                    {analysis}
-                  </p>
-                </div>
+                {parsedAnalysis ? (
+                  <div className="grid grid-cols-1 gap-3">
+                    <div className="bg-slate-700 p-4 rounded-lg">
+                      <h3 className="font-semibold text-white mb-2">Impact Summary</h3>
+                      <p className="text-sm text-slate-200 whitespace-pre-wrap">
+                        {parsedAnalysis.impact || 'N/A'}
+                      </p>
+                    </div>
+                    <div className="bg-slate-700 p-4 rounded-lg">
+                      <h3 className="font-semibold text-white mb-2">Recommendations</h3>
+                      <p className="text-sm text-slate-200 whitespace-pre-wrap">
+                        {parsedAnalysis.recommendations || 'N/A'}
+                      </p>
+                    </div>
+                    <div className="bg-slate-700 p-4 rounded-lg">
+                      <h3 className="font-semibold text-white mb-2">Cost-Benefit</h3>
+                      <p className="text-sm text-slate-200 whitespace-pre-wrap">
+                        {parsedAnalysis.costBenefit || 'N/A'}
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-slate-700 p-4 rounded-lg">
+                    <h3 className="font-semibold text-white mb-3">AI Recommendations</h3>
+                    <p className="text-sm text-slate-200 whitespace-pre-wrap">
+                      {analysis}
+                    </p>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center h-64 text-center">

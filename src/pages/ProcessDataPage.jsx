@@ -1,4 +1,4 @@
-﻿import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo, useEffect } from 'react';
 import DataTable from '../components/DataTable';
 import SimpleTable from '../components/SimpleTable';
 import processDataFile from '../data/processData.json';
@@ -118,6 +118,10 @@ const ProcessDataPage = () => {
   const [uploadError, setUploadError] = useState(null);
   const [uploadedName, setUploadedName] = useState('');
   const [csvTable, setCsvTable] = useState(null);
+  const [rowCount, setRowCount] = useState(0);
+  const [sampleCount, setSampleCount] = useState(0);
+  const [activeFileName, setActiveFileName] = useState('');
+  const [validationSummary, setValidationSummary] = useState('');
 
   const [analysisFocus, setAnalysisFocus] = useState(
     'Copper slag contains gold and silver. Suggest recovery steps and efficiency improvements.'
@@ -184,6 +188,10 @@ const ProcessDataPage = () => {
     setCsvTable(null);
     setAnalysisTable(null);
     setAnalysisRaw('');
+    setRowCount(processDataFile.processes.length);
+    setSampleCount(0);
+    setActiveFileName('');
+    setValidationSummary('');
   };
 
   const handleUpload = (event) => {
@@ -192,8 +200,10 @@ const ProcessDataPage = () => {
 
     setUploadError(null);
     setUploadedName(file.name);
+    setActiveFileName(file.name);
     setAnalysisTable(null);
     setAnalysisRaw('');
+    setValidationSummary('');
 
     const reader = new FileReader();
     reader.onload = () => {
@@ -207,7 +217,9 @@ const ProcessDataPage = () => {
         const rawHeaders = rows[0].map((header) => String(header).trim());
         const mappedHeaders = rawHeaders.map((header) => mapHeader(header));
         const dataRows = rows.slice(1).filter((row) => row.some((cell) => String(cell).trim() !== ''));
+        setRowCount(dataRows.length);
 
+        let invalidNumbers = 0;
         const objects = dataRows.map((row, index) => {
           const obj = {};
           mappedHeaders.forEach((key, colIndex) => {
@@ -217,7 +229,11 @@ const ProcessDataPage = () => {
           numericFields.forEach((field) => {
             if (obj[field] !== undefined && obj[field] !== '') {
               const parsed = Number(obj[field]);
-              obj[field] = Number.isNaN(parsed) ? obj[field] : parsed;
+              if (Number.isNaN(parsed)) {
+                invalidNumbers += 1;
+              } else {
+                obj[field] = parsed;
+              }
             }
           });
 
@@ -235,6 +251,9 @@ const ProcessDataPage = () => {
         });
 
         setCsvTable({ columns: rawHeaders, rows: dataRows });
+        if (invalidNumbers > 0) {
+          setValidationSummary(`Warning: ${invalidNumbers} numeric values could not be parsed.`);
+        }
 
         const required = ['processName', 'recoveryRate', 'efficiency'];
         const hasRequired = required.every((field) => mappedHeaders.includes(field));
@@ -280,7 +299,11 @@ const ProcessDataPage = () => {
         setAnalysisRaw(String(result || '').trim());
       } else {
         const snapshot = csvTable || buildSnapshotFromData(data);
-        const sampleRows = snapshot.rows.slice(0, 20);
+        const maxRows = 25;
+        const sampleRows = snapshot.rows.slice(0, maxRows).map((row) =>
+          row.map((cell) => String(cell).slice(0, 120))
+        );
+        setSampleCount(sampleRows.length);
 
         const result = await analyzeDatasetInsights({
           focus: analysisFocus,
@@ -288,23 +311,12 @@ const ProcessDataPage = () => {
           rows: sampleRows,
         });
 
-        const cleanedResult = String(result)
-          .replace(/```json/gi, '```')
-          .replace(/```/g, '')
-          .trim();
-        setAnalysisRaw(cleanedResult);
-        const parsed = (() => {
-          try {
-            return JSON.parse(cleanedResult);
-          } catch {
-            return null;
-          }
-        })();
-
-        if (parsed?.columns && parsed?.rows) {
-          setAnalysisTable(parsed);
+        if (result.ok && result.data?.columns && result.data?.rows) {
+          setAnalysisTable(result.data);
+          setAnalysisRaw('');
         } else {
           setAnalysisError('AI response was not valid JSON. Showing raw response below.');
+          setAnalysisRaw(result.raw || '');
         }
       }
     } catch (err) {
@@ -476,6 +488,27 @@ const ProcessDataPage = () => {
             />
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-300">
+            <div className="bg-slate-800 p-3 rounded border border-slate-700">
+              <div className="text-slate-400">Active File</div>
+              <div className="font-semibold">{activeFileName || 'Sample data'}</div>
+            </div>
+            <div className="bg-slate-800 p-3 rounded border border-slate-700">
+              <div className="text-slate-400">Rows Loaded</div>
+              <div className="font-semibold">{rowCount || data.length}</div>
+            </div>
+            <div className="bg-slate-800 p-3 rounded border border-slate-700">
+              <div className="text-slate-400">Rows Sent to AI</div>
+              <div className="font-semibold">{sampleCount || Math.min((rowCount || data.length), 25)}</div>
+            </div>
+          </div>
+
+          {validationSummary && (
+            <div className="p-3 bg-yellow-900 bg-opacity-20 border border-yellow-700 rounded text-yellow-200 text-sm">
+              {validationSummary}
+            </div>
+          )}
+
           <div className="flex flex-col md:flex-row md:items-center gap-3">
             <label className="flex items-center gap-2 text-sm text-slate-300">
               <input
@@ -568,3 +601,5 @@ const ProcessDataPage = () => {
 };
 
 export default ProcessDataPage;
+
+

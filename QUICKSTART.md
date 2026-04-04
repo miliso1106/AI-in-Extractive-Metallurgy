@@ -1,6 +1,6 @@
-# Quick Start Guide
+﻿# Quick Start Guide
 
-## ⚡ Get Started in 5 Minutes
+## âš¡ Get Started in 5 Minutes
 
 ### Step 1: Install Dependencies
 Open your terminal in the project folder and run:
@@ -26,11 +26,11 @@ npm install
 npm run dev
 ```
 
-The app will open automatically at `http://localhost:3000` 🎉
+The app will open automatically at `http://localhost:3000` ðŸŽ‰
 
 ---
 
-## 📊 What Each Page Does
+## ðŸ“Š What Each Page Does
 
 ### 1. Dashboard (Home)
 - See all key metrics at a glance
@@ -58,7 +58,7 @@ The app will open automatically at `http://localhost:3000` 🎉
 
 ---
 
-## 🔧 Commands Reference
+## ðŸ”§ Commands Reference
 
 | Command | What it does |
 |---------|-------------|
@@ -69,15 +69,15 @@ The app will open automatically at `http://localhost:3000` 🎉
 
 ---
 
-## 📱 Tips & Tricks
+## ðŸ“± Tips & Tricks
 
-✅ **Pro Tips:**
+âœ… **Pro Tips:**
 - Save your parameter values (temperature, pressure ranges) for your specific process
 - Use realistic values from your actual extraction process
 - Read the AI recommendations carefully - they're based on metallurgy principles
 - Check back daily for new optimization opportunities as your process parameters change
 
-⚠️ **Important:**
+âš ï¸ **Important:**
 - Never share your `.env` file or API key
 - Close the app when not using it (prevents unnecessary API calls)
 - The AI uses Open Router API, so you need internet connection
@@ -85,7 +85,7 @@ The app will open automatically at `http://localhost:3000` 🎉
 
 ---
 
-## 🆘 Common Issues & Fixes
+## ðŸ†˜ Common Issues & Fixes
 
 ### "Module not found" error
 ```bash
@@ -102,30 +102,30 @@ The app will automatically try a different port. Check the terminal output for t
 
 ---
 
-## 📚 File Structure Overview
+## ðŸ“š File Structure Overview
 
 ```
 Your Project
-├── src/                    ← All your code goes here
-│   ├── pages/            ← The 4 main pages
-│   ├── components/       ← Reusable components (Header)
-│   ├── services/         ← AI integration code
-├── public/               ← Images, static files
-├── package.json          ← Dependency list
-├── .env                  ← YOUR API KEY (keep secret!)
-└── index.html            ← Main HTML file
+â”œâ”€â”€ src/                    â† All your code goes here
+â”‚   â”œâ”€â”€ pages/            â† The 4 main pages
+â”‚   â”œâ”€â”€ components/       â† Reusable components (Header)
+â”‚   â”œâ”€â”€ services/         â† AI integration code
+â”œâ”€â”€ public/               â† Images, static files
+â”œâ”€â”€ package.json          â† Dependency list
+â”œâ”€â”€ .env                  â† YOUR API KEY (keep secret!)
+â””â”€â”€ index.html            â† Main HTML file
 ```
 
 ---
 
 ## Next Steps
 
-1. ✅ Install dependencies
-2. ✅ Set up API key
-3. ✅ Run the app
-4. 📊 Try entering some data in Process Analyzer
-5. 🧪 Experiment with different parameters
-6. 📝 Document your results for your report
+1. âœ… Install dependencies
+2. âœ… Set up API key
+3. âœ… Run the app
+4. ðŸ“Š Try entering some data in Process Analyzer
+5. ðŸ§ª Experiment with different parameters
+6. ðŸ“ Document your results for your report
 
 ---
 
@@ -136,4 +136,5 @@ Your Project
 3. Visit: https://openrouter.ai/docs
 4. Check React docs: https://react.dev
 
-Happy optimizing! 🚀
+Happy optimizing! ðŸš€
+

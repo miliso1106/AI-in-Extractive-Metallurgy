@@ -1,30 +1,30 @@
-# 🚀 Complete Setup Instructions
+﻿# ðŸš€ Complete Setup Instructions
 
 ## Prerequisites
 
 Before starting, ensure you have:
-- ✅ Node.js 16+ installed ([Download](https://nodejs.org/))
-- ✅ npm (comes with Node.js)
-- ✅ A text editor (VS Code recommended - [Download](https://code.visualstudio.com/))
-- ✅ An Open Router account ([Sign up for free](https://openrouter.ai))
+- âœ… Node.js 16+ installed ([Download](https://nodejs.org/))
+- âœ… npm (comes with Node.js)
+- âœ… A text editor (VS Code recommended - [Download](https://code.visualstudio.com/))
+- âœ… An Open Router account ([Sign up for free](https://openrouter.ai))
 
 ---
 
 ## Step-by-Step Installation
 
-### 1️⃣ Navigate to Project Directory
+### 1ï¸âƒ£ Navigate to Project Directory
 ```bash
 cd "C:\Users\soumi\OneDrive\Desktop\AI in Extractive Metallurgy"
 ```
 
-### 2️⃣ Install Dependencies
+### 2ï¸âƒ£ Install Dependencies
 ```bash
 npm install
 ```
 This will download and install all required packages.
 *Might take 2-3 minutes on first run*
 
-### 3️⃣ Create Environment File
+### 3ï¸âƒ£ Create Environment File
 **Option A: Using Command Line**
 ```bash
 copy .env.example .env
@@ -32,11 +32,11 @@ copy .env.example .env
 
 **Option B: Manual (Windows)**
 1. Find `.env.example` file in root folder
-2. Right-click → Copy
-3. Right-click in empty space → Paste
+2. Right-click â†’ Copy
+3. Right-click in empty space â†’ Paste
 4. Rename to `.env`
 
-### 4️⃣ Get Your API Key
+### 4ï¸âƒ£ Get Your API Key
 1. Go to [https://openrouter.ai](https://openrouter.ai)
 2. Click "Sign Up" (it's free!)
 3. Complete registration
@@ -44,18 +44,18 @@ copy .env.example .env
 5. Create a new key
 6. Copy the key
 
-### 5️⃣ Configure API Key
+### 5ï¸âƒ£ Configure API Key
 1. Open `.env` file in VS Code
-2. Find: `VITE_OPENROUTER_API_KEY=your_api_key_here`
+2. Find: `OPENROUTER_API_KEY=your_api_key_here`
 3. Replace `your_api_key_here` with your actual key
 4. Save file (Ctrl+S)
 
 **Example:**
 ```
-VITE_OPENROUTER_API_KEY=sk-or-xxx-yyy-zzz
+OPENROUTER_API_KEY=sk-or-xxx-yyy-zzz
 ```
 
-### 6️⃣ Start Development Server
+### 6ï¸âƒ£ Start Development Server
 ```bash
 npm run dev
 ```
@@ -64,17 +64,17 @@ The app will open automatically at `http://localhost:3000`
 
 ---
 
-## 🎉 Success Indicators
+## ðŸŽ‰ Success Indicators
 
 You'll know it's working when:
-- ✅ Terminal shows "VITE v5.0.0" 
-- ✅ Browser opens with dark blue dashboard theme
-- ✅ Four navigation tabs visible (Dashboard, Process Analyzer, Recovery Prediction, Environmental Impact)
-- ✅ You can see charts and metric cards
+- âœ… Terminal shows "VITE v5.0.0" 
+- âœ… Browser opens with dark blue dashboard theme
+- âœ… Four navigation tabs visible (Dashboard, Process Analyzer, Recovery Prediction, Environmental Impact)
+- âœ… You can see charts and metric cards
 
 ---
 
-## 📊 Testing the Dashboard
+## ðŸ“Š Testing the Dashboard
 
 ### Test 1: View Dashboard
 1. Start app with `npm run dev`
@@ -115,7 +115,7 @@ You'll know it's working when:
 
 ---
 
-## 🔧 Useful Commands
+## ðŸ”§ Useful Commands
 
 ```bash
 # Start development server
@@ -133,55 +133,55 @@ npm run lint
 
 ---
 
-## 📁 Project Files Created
+## ðŸ“ Project Files Created
 
 ```
 Your Project Root/
-├── src/
-│   ├── main.jsx                    ← React entry point
-│   ├── App.jsx                     ← Main component
-│   ├── index.css                   ← Tailwind styles
-│   ├── components/
-│   │   └── Header.jsx              ← Navigation bar
-│   ├── pages/
-│   │   ├── Dashboard.jsx           ← Home dashboard
-│   │   ├── ProcessAnalyzer.jsx     ← Optimization tool
-│   │   ├── RecoveryPrediction.jsx  ← Prediction module
-│   │   └── EnvironmentalImpact.jsx ← Impact analysis
-│   └── services/
-│       └── openRouterService.js    ← API integration
-│
-├── Configuration Files:
-│   ├── index.html                  ← HTML entry
-│   ├── package.json                ← Dependencies list
-│   ├── vite.config.js             ← Build config
-│   ├── tailwind.config.js         ← Tailwind config
-│   ├── postcss.config.js          ← CSS processing
-│   ├── .eslintrc.json             ← Code quality
-│   └── .env.example               ← Template for secrets
-│
-├── Documentation:
-│   ├── README.md                   ← Full documentation
-│   ├── QUICKSTART.md              ← Quick start guide
-│   ├── REPORT_GUIDELINES.md       ← Report writing help
-│   └── SETUP_INSTRUCTIONS.md      ← This file
-│
-└── Git Files:
-    ├── .gitignore                 ← What to exclude from git
-    └── README.md                  ← Project overview
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ main.jsx                    â† React entry point
+â”‚   â”œâ”€â”€ App.jsx                     â† Main component
+â”‚   â”œâ”€â”€ index.css                   â† Tailwind styles
+â”‚   â”œâ”€â”€ components/
+â”‚   â”‚   â””â”€â”€ Header.jsx              â† Navigation bar
+â”‚   â”œâ”€â”€ pages/
+â”‚   â”‚   â”œâ”€â”€ Dashboard.jsx           â† Home dashboard
+â”‚   â”‚   â”œâ”€â”€ ProcessAnalyzer.jsx     â† Optimization tool
+â”‚   â”‚   â”œâ”€â”€ RecoveryPrediction.jsx  â† Prediction module
+â”‚   â”‚   â””â”€â”€ EnvironmentalImpact.jsx â† Impact analysis
+â”‚   â””â”€â”€ services/
+â”‚       â””â”€â”€ openRouterService.js    â† API integration
+â”‚
+â”œâ”€â”€ Configuration Files:
+â”‚   â”œâ”€â”€ index.html                  â† HTML entry
+â”‚   â”œâ”€â”€ package.json                â† Dependencies list
+â”‚   â”œâ”€â”€ vite.config.js             â† Build config
+â”‚   â”œâ”€â”€ tailwind.config.js         â† Tailwind config
+â”‚   â”œâ”€â”€ postcss.config.js          â† CSS processing
+â”‚   â”œâ”€â”€ .eslintrc.json             â† Code quality
+â”‚   â””â”€â”€ .env.example               â† Template for secrets
+â”‚
+â”œâ”€â”€ Documentation:
+â”‚   â”œâ”€â”€ README.md                   â† Full documentation
+â”‚   â”œâ”€â”€ QUICKSTART.md              â† Quick start guide
+â”‚   â”œâ”€â”€ REPORT_GUIDELINES.md       â† Report writing help
+â”‚   â””â”€â”€ SETUP_INSTRUCTIONS.md      â† This file
+â”‚
+â””â”€â”€ Git Files:
+    â”œâ”€â”€ .gitignore                 â† What to exclude from git
+    â””â”€â”€ README.md                  â† Project overview
 ```
 
 ---
 
-## ⚠️ Important Security Notes
+## âš ï¸ Important Security Notes
 
-### 🔒 Protect Your API Key
+### ðŸ”’ Protect Your API Key
 - **NEVER commit `.env` file to Git**
 - **NEVER share your API key**
 - **Use `.gitignore`** (already configured)
 - The `.env` file should stay local only
 
-### ✅ Good Practice
+### âœ… Good Practice
 ```bash
 # DO NOT do this
 git add .env
@@ -194,7 +194,7 @@ git commit -m "Update features"
 
 ---
 
-## 🐛 Troubleshooting
+## ðŸ› Troubleshooting
 
 ### Issue: `npm: command not found`
 **Solution:** Install Node.js from [nodejs.org](https://nodejs.org/)
@@ -227,7 +227,7 @@ npm run preview
 
 ---
 
-## 🚀 Deployment
+## ðŸš€ Deployment
 
 ### Local Only (Development)
 ```bash
@@ -249,7 +249,7 @@ Creates `dist/` folder with production files ready to deploy.
 
 ---
 
-## 📚 Learning Resources
+## ðŸ“š Learning Resources
 
 - **React:** [react.dev](https://react.dev)
 - **Tailwind CSS:** [tailwindcss.com](https://tailwindcss.com)
@@ -259,18 +259,18 @@ Creates `dist/` folder with production files ready to deploy.
 
 ---
 
-## ✅ Next Steps After Installation
+## âœ… Next Steps After Installation
 
-1. ✅ Run the app successfully
-2. ✅ Test all four main pages
-3. ✅ Try using AI recommendations with real data
-4. ✅ Document results for your report
-5. ✅ Customize for your specific metallurgy process
-6. ✅ Write your handwritten report
+1. âœ… Run the app successfully
+2. âœ… Test all four main pages
+3. âœ… Try using AI recommendations with real data
+4. âœ… Document results for your report
+5. âœ… Customize for your specific metallurgy process
+6. âœ… Write your handwritten report
 
 ---
 
-## 📞 Quick Help
+## ðŸ“ž Quick Help
 
 **Can't connect to API?**
 - Check internet connection
@@ -293,10 +293,11 @@ npm install
 
 ---
 
-## 🎯 Your Project Is Ready! 🎉
+## ðŸŽ¯ Your Project Is Ready! ðŸŽ‰
 
 You now have a fully functional AI-driven extractive metallurgy dashboard.
 
 **Next:** Follow the QUICKSTART.md for rapid testing, or start writing your report using REPORT_GUIDELINES.md.
 
-Good luck with your project! 🚀
+Good luck with your project! ðŸš€
+

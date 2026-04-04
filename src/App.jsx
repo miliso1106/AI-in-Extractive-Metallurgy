@@ -5,6 +5,7 @@ import ProcessAnalyzer from './pages/ProcessAnalyzer';
 import EnvironmentalImpact from './pages/EnvironmentalImpact';
 import RecoveryPrediction from './pages/RecoveryPrediction';
 import ProcessDataPage from './pages/ProcessDataPage';
+import MLPrediction from './pages/MLPrediction';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -17,6 +18,8 @@ function App() {
         return <EnvironmentalImpact />;
       case 'recovery':
         return <RecoveryPrediction />;
+      case 'ml':
+        return <MLPrediction />;
       case 'data':
         return <ProcessDataPage />;
       default:

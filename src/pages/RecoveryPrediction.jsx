@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { predictRecoveryRate } from '../services/openRouterService';
 import { Loader, TrendingUp } from 'lucide-react';
 
@@ -14,6 +14,15 @@ const RecoveryPrediction = () => {
   const [loading, setLoading] = useState(false);
   const [prediction, setPrediction] = useState(null);
   const [error, setError] = useState(null);
+
+  const parsedPrediction = useMemo(() => {
+    if (!prediction) return null;
+    try {
+      return JSON.parse(prediction);
+    } catch {
+      return null;
+    }
+  }, [prediction]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -36,6 +45,12 @@ const RecoveryPrediction = () => {
       setLoading(false);
     }
   };
+
+  const predictedRate = (() => {
+    if (parsedPrediction?.recoveryRate) return `${parsedPrediction.recoveryRate}%`;
+    const match = prediction?.match(/(\d+\.?\d*)\s*%/);
+    return match ? `~${match[1]}%` : 'See analysis';
+  })();
 
   return (
     <div className="space-y-6">
@@ -162,49 +177,34 @@ const RecoveryPrediction = () => {
                 <div className="bg-gradient-to-r from-green-900 to-green-800 p-6 rounded-lg border border-green-700">
                   <p className="text-sm text-green-200 mb-2">Predicted Recovery Rate</p>
                   <p className="text-4xl font-bold text-green-300">
-                    {(() => {
-                      try {
-                        const parsed = JSON.parse(prediction);
-                        if (parsed.recoveryRate) return `${parsed.recoveryRate}%`;
-                      } catch {}
-                      const match = prediction.match(/(\d+\.?\d*)\s*%/);
-                      return match ? `~${match[1]}%` : 'See analysis';
-                    })()}
+                    {predictedRate}
                   </p>
                 </div>
+
+                {parsedPrediction ? (
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <div className="bg-slate-700 p-3 rounded">
+                      <p className="text-slate-400">Confidence Level</p>
+                      <p className="text-blue-300 font-semibold">
+                        {parsedPrediction.confidence || 'See analysis'}
+                      </p>
+                    </div>
+                    <div className="bg-slate-700 p-3 rounded">
+                      <p className="text-slate-400">Key Factors</p>
+                      <p className="text-yellow-300 font-semibold">
+                        {Array.isArray(parsedPrediction.factors)
+                          ? parsedPrediction.factors.join(', ')
+                          : parsedPrediction.factors || 'See analysis'}
+                      </p>
+                    </div>
+                  </div>
+                ) : null}
 
                 <div className="bg-slate-700 p-4 rounded-lg">
                   <h3 className="font-semibold text-white mb-3">AI Analysis</h3>
                   <p className="text-sm text-slate-200 whitespace-pre-wrap">
                     {prediction}
                   </p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="bg-slate-700 p-3 rounded">
-                    <p className="text-slate-400">Confidence Level</p>
-                    <p className="text-blue-300 font-semibold">
-                      {(() => {
-                        try {
-                          const parsed = JSON.parse(prediction);
-                          if (parsed.confidence) return parsed.confidence;
-                        } catch {}
-                        return 'See analysis';
-                      })()}
-                    </p>
-                  </div>
-                  <div className="bg-slate-700 p-3 rounded">
-                    <p className="text-slate-400">Key Factors</p>
-                    <p className="text-yellow-300 font-semibold">
-                      {(() => {
-                        try {
-                          const parsed = JSON.parse(prediction);
-                          if (parsed.factors) return parsed.factors;
-                        } catch {}
-                        return 'See analysis';
-                      })()}
-                    </p>
-                  </div>
                 </div>
               </div>
             ) : (
