@@ -1,0 +1,5 @@
+model,cv_r2,cv_mae,holdout_r2,holdout_mae
+Random Forest,0.862,0.927,0.937,1.217
+XGBoost,0.831,1.289,0.938,1.168
+Linear Regression,0.807,1.262,0.833,1.615
+SVR (RBF),-0.169,2.849,0.721,2.611

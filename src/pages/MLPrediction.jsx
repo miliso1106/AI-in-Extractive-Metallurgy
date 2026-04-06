@@ -1,7 +1,8 @@
-﻿import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Cpu, TrendingUp } from 'lucide-react';
 import defaultModelArtifact from '../data/ml_model.json';
 import perProcessModels from '../data/ml_models_by_process.json';
+import bestModelsSummary from '../data/best_models_summary.json';
 
 const PROCESS_META = {
   'Copper Heap Leach': {
@@ -50,6 +51,10 @@ const processOptions = Object.keys(PROCESS_META);
 const defaultProcess = processOptions[0];
 
 const getProcessModel = (processName) => perProcessModels.processes?.[processName] || defaultModelArtifact;
+const bestModelLookup = Object.fromEntries(
+  (bestModelsSummary.best_model_per_process || []).map((row) => [row.processName, row]),
+);
+const getBestModelStats = (processName) => bestModelLookup[processName] || null;
 
 const getFormDataFromDefaults = (values) => ({
   condition_1_value: values[0],
@@ -83,6 +88,7 @@ const MLPrediction = () => {
   const [formData, setFormData] = useState(getFormDataFromDefaults(PROCESS_META[defaultProcess].defaults));
 
   const model = getProcessModel(selectedProcess);
+  const bestStats = getBestModelStats(selectedProcess);
   const featureKeys = model.features;
   const ranges = model.ranges || [];
   const labels = PROCESS_META[selectedProcess].labels;
@@ -188,27 +194,37 @@ const MLPrediction = () => {
               </p>
             </div>
 
-            <div className="bg-slate-700 p-4 rounded-lg text-sm text-slate-200">
-              <p className="font-semibold text-white mb-2">Model Type</p>
-              <p>{model.model_type}</p>
+            <div className="bg-emerald-900/35 border border-emerald-700 p-4 rounded-lg text-sm text-emerald-100">
+              <p className="font-semibold text-emerald-200 mb-2">Best Offline Model (from latest training)</p>
+              <p className="text-white">{bestStats?.model || model.best_candidate || model.model_type}</p>
             </div>
 
             <div className="bg-slate-700 p-4 rounded-lg text-sm text-slate-200">
-              <p className="font-semibold text-white mb-2">Model Metrics</p>
-              <p>MAE: {model.metrics?.mae?.toFixed?.(4)}</p>
-              <p>R2: {model.metrics?.r2?.toFixed?.(4)}</p>
+              <p className="font-semibold text-white mb-2">Best Model Metrics</p>
+              <p>CV MAE: {bestStats?.cv_mae?.toFixed?.(4) ?? model.metrics?.mae?.toFixed?.(4) ?? 'N/A'}</p>
+              <p>CV R2: {bestStats?.cv_r2?.toFixed?.(4) ?? model.metrics?.r2?.toFixed?.(4) ?? 'N/A'}</p>
+              <p>Holdout MAE: {bestStats?.holdout_mae?.toFixed?.(4) ?? 'N/A'}</p>
+              <p>Holdout R2: {bestStats?.holdout_r2?.toFixed?.(4) ?? 'N/A'}</p>
+            </div>
+
+            <div className="bg-amber-900/30 border border-amber-700 p-4 rounded-lg text-xs text-amber-100">
+              <p className="font-semibold text-amber-200 mb-1">Live Prediction Engine</p>
+              <p>
+                The UI currently computes prediction using a linear surrogate formula for transparent weights and fast
+                response.
+              </p>
             </div>
 
             {Array.isArray(model.coefficients) && (
               <div className="bg-slate-700 p-4 rounded-lg text-xs text-slate-300">
-                <p className="font-semibold text-white mb-2">Weights (for reference)</p>
+                <p className="font-semibold text-white mb-2">Linear Weights (Surrogate Reference)</p>
                 <p>{model.coefficients.map((w) => Number(w).toFixed(6)).join(', ')}</p>
               </div>
             )}
 
             <div className="flex items-center gap-2 text-xs text-slate-400">
               <TrendingUp size={14} />
-              Prediction uses features: {featureKeys.join(', ')}
+              Inputs used by live predictor: {featureKeys.join(', ')}
             </div>
           </div>
         </div>
@@ -218,3 +234,5 @@ const MLPrediction = () => {
 };
 
 export default MLPrediction;
+
+

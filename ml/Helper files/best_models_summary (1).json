@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-04-06T17:24:56.725848+00:00",
+  "target": "recoveryRate",
+  "features": [
+    "condition_1_value",
+    "condition_2_value",
+    "condition_3_value",
+    "condition_4_value"
+  ],
+  "best_model_per_process": [
+    {
+      "processName": "Aluminum Bauxite (Bayer)",
+      "model": "Random Forest",
+      "cv_r2": 0.9355390779563612,
+      "cv_mae": 0.9541166666665937,
+      "holdout_r2": 0.9096604038269714,
+      "holdout_mae": 2.3961666666665487,
+      "samples": 20
+    },
+    {
+      "processName": "Cobalt Leaching (PAL)",
+      "model": "Random Forest",
+      "cv_r2": 0.9836650805248061,
+      "cv_mae": 1.0210333333333605,
+      "holdout_r2": 0.9850866691648098,
+      "holdout_mae": 1.4708333333334203,
+      "samples": 20
+    },
+    {
+      "processName": "Copper Flotation",
+      "model": "Random Forest",
+      "cv_r2": 0.9498519604223205,
+      "cv_mae": 1.3699500000001066,
+      "holdout_r2": 0.9665265561415123,
+      "holdout_mae": 1.238416666666641,
+      "samples": 20
+    },
+    {
+      "processName": "Copper Heap Leach",
+      "model": "Random Forest",
+      "cv_r2": 0.9224500499270881,
+      "cv_mae": 0.9347166666666823,
+      "holdout_r2": 0.9406868991081648,
+      "holdout_mae": 1.149416666666614,
+      "samples": 20
+    },
+    {
+      "processName": "Gold Cyanidation",
+      "model": "Linear Regression",
+      "cv_r2": 0.7872745424901776,
+      "cv_mae": 0.47905916214978034,
+      "holdout_r2": 0.9962388065248147,
+      "holdout_mae": 0.32502780752593097,
+      "samples": 20
+    },
+    {
+      "processName": "Iron Magnetite",
+      "model": "Random Forest",
+      "cv_r2": 0.9314793629564502,
+      "cv_mae": 0.8198333333333565,
+      "holdout_r2": 0.8816992609017674,
+      "holdout_mae": 0.3672499999999346,
+      "samples": 20
+    },
+    {
+      "processName": "Lead Smelting",
+      "model": "XGBoost",
+      "cv_r2": 0.8986098487746215,
+      "cv_mae": 0.9512874603271492,
+      "holdout_r2": 0.869188453144018,
+      "holdout_mae": 1.7218341827392578,
+      "samples": 20
+    },
+    {
+      "processName": "Nickel Laterite (HPAL)",
+      "model": "Random Forest",
+      "cv_r2": 0.9113218669561807,
+      "cv_mae": 0.9024333333332131,
+      "holdout_r2": 0.9971778339469644,
+      "holdout_mae": 0.3148333333329987,
+      "samples": 20
+    },
+    {
+      "processName": "Silver Leaching",
+      "model": "Random Forest",
+      "cv_r2": 0.8485703271047266,
+      "cv_mae": 0.8683833333333283,
+      "holdout_r2": 0.97384688295166,
+      "holdout_mae": 1.0368333333331492,
+      "samples": 20
+    },
+    {
+      "processName": "Zinc Roasting",
+      "model": "Linear Regression",
+      "cv_r2": 0.9484673269191279,
+      "cv_mae": 1.0142231179925396,
+      "holdout_r2": 0.9723967981306665,
+      "holdout_mae": 0.9344187076382191,
+      "samples": 20
+    }
+  ]
+}
