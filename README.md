@@ -1,10 +1,10 @@
-﻿# AI/ML-Driven Extractive Metallurgy Dashboard
+﻿# AI-Driven Extractive Metallurgy Dashboard
 
 ## 📋 Project Overview
 
-A modern, interactive dashboard for optimizing extractive metallurgy processes using AI/ML technologies. The application leverages the Open Router API to provide real-time recommendations for process optimization, recovery rate predictions, and environmental impact analysis.
+A modern, interactive dashboard for optimizing extractive metallurgy processes using AI/ML technologies. The application now combines OpenRouter-based AI analysis with a dedicated per-process ML prediction workflow that uses exported model artefacts and offline best-model benchmarking.
 
-**Project Goal:** Increase extraction process efficiency through AI/ML-powered insights and recommendations.
+**Project Goal:** Increase extraction process efficiency through AI-powered insights and recommendations.
 
 ---
 
@@ -18,20 +18,26 @@ A modern, interactive dashboard for optimizing extractive metallurgy processes u
 
 ### 2. **Process Analyzer**
    - Input custom process parameters (temperature, pressure, efficiency, issues)
-   - Get AI/ML-powered optimization recommendations
+   - Get AI-powered optimization recommendations
    - Identify bottlenecks and improvement opportunities
    - Expected efficiency gains calculation
 
 ### 3. **Recovery Rate Prediction**
    - Predict metal recovery rates based on leaching parameters
    - Analyze ore grade, temperature, pH, and chemical concentration
-   - AI/ML confidence levels for predictions
+   - AI confidence levels for predictions
    - Risk factor assessment
 
-### 4. **Environmental Impact Analysis**
+### 4. **ML Prediction**
+   - Dedicated per-process recovery prediction page
+   - Live browser-side prediction using linear regression artefacts
+   - Input guardrails based on dataset min/max ranges
+   - Displays latest offline best-model metrics for each process
+
+### 5. **Environmental Impact Analysis**
    - Assess waste generation, water usage, and energy consumption
    - Calculate CO2 emissions footprint
-   - Get sustainability recommendations from AI/ML
+   - Get sustainability recommendations from AI
    - Cost-benefit analysis for improvements
 
 ---
@@ -43,7 +49,8 @@ A modern, interactive dashboard for optimizing extractive metallurgy processes u
 - **Charts:** Recharts 2.10 (data visualization)
 - **Icons:** Lucide React 0.292
 - **API Client:** Axios 1.6
-- **LLM Integration:** Open Router API
+- **LLM Integration:** OpenRouter API
+- **Offline ML:** scikit-learn, XGBoost, SVR, Matplotlib, Seaborn
 - **Environment:** Node.js 16+
 
 ---
@@ -52,8 +59,8 @@ A modern, interactive dashboard for optimizing extractive metallurgy processes u
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/miliso1106/AI/ML-in-Extractive-Metallurgy.git
-cd AI/ML-in-Extractive-Metallurgy
+git clone https://github.com/miliso1106/AI-in-Extractive-Metallurgy.git
+cd AI-in-Extractive-Metallurgy
 ```
 
 ### 2. Install Dependencies
@@ -99,8 +106,10 @@ npm run build
 
 ### Main Navigation
 - **Dashboard:** Overview of all key metrics
+- **Process Data:** Inspect the curated metallurgy datasets
 - **Process Analyzer:** Get optimization recommendations
-- **Recovery Prediction:** Forecast metal recovery rates
+- **Recovery Prediction:** LLM-based recovery analysis from input conditions
+- **ML Prediction:** Deterministic per-process prediction using exported artefacts
 - **Environmental Impact:** Assess sustainability metrics
 
 ### Data Visualization
@@ -111,9 +120,9 @@ npm run build
 
 ---
 
-## 🧠 AI/ML Integration
+## 🧠 AI Integration
 
-The dashboard uses Open Router API to access various LLMs for:
+The dashboard uses OpenRouter API to access various LLMs for:
 
 1. **Process Optimization**
    - Analyzes current parameters
@@ -122,7 +131,7 @@ The dashboard uses Open Router API to access various LLMs for:
    - Estimates implementation timeline
 
 2. **Recovery Prediction**
-   - Predicts final metal recovery rates
+   - Generates LLM-based recovery analysis
    - Assesses confidence levels
    - Identifies success factors
    - Provides risk assessment
@@ -132,6 +141,13 @@ The dashboard uses Open Router API to access various LLMs for:
    - Recommends waste reduction strategies
    - Calculates ROI for improvements
    - Suggests green technologies
+
+### ML Prediction Pipeline
+- `src/pages/MLPrediction.jsx` provides the live ML UI
+- `src/data/ml_models_by_process.json` stores exported linear-surrogate artefacts per process
+- `src/data/best_models_summary.json` stores the latest offline best-model statistics
+- `ml/train_and_generate_report_graphs.py` compares Linear Regression, Random Forest, SVR, and XGBoost and generates report-ready tables/graphs
+- `ml/colab_per_process_compare.py` supports a lighter Colab workflow for per-process comparison/export
 
 ---
 
@@ -184,11 +200,22 @@ Edit `src/services/openRouterService.js` to customize:
 │   ├── pages/
 │   │   ├── Dashboard.jsx          # Main dashboard
 │   │   ├── ProcessAnalyzer.jsx    # Process optimization
-│   │   ├── RecoveryPrediction.jsx # Recovery forecasting
+│   │   ├── RecoveryPrediction.jsx # LLM-based recovery analysis
+│   │   ├── MLPrediction.jsx       # Per-process ML prediction
 │   │   └── EnvironmentalImpact.jsx # Impact analysis
+│   │
+│   ├── data/
+│   │   ├── ml_model.json          # Default fallback artefact
+│   │   ├── ml_models_by_process.json # Per-process linear artefacts
+│   │   └── best_models_summary.json  # Latest offline best-model stats
 │   │
 │   └── services/
 │       └── openRouterService.js   # API integration
+│
+├── ml/
+│   ├── colab_per_process_compare.py # Colab comparison/export script
+│   ├── train_and_generate_report_graphs.py # Full ML evaluation pipeline
+│   └── README.md                    # ML workflow notes
 │
 ├── .env.example                   # Environment variables template
 ├── .gitignore                     # Git ignore rules
@@ -207,8 +234,8 @@ Edit `src/services/openRouterService.js` to customize:
    - Temperature: 70°C
    - Pressure: 2.5 atm
    - Issues: "Slow leaching rate"
-3. Click "Get AI/ML Recommendations"
-4. View detailed AI/ML suggestions
+3. Click "Get AI Recommendations"
+4. View detailed AI suggestions
 
 ### Example 2: Predict Gold Recovery
 1. Navigate to "Recovery Prediction"
@@ -221,10 +248,17 @@ Edit `src/services/openRouterService.js` to customize:
 3. Click "Predict Recovery Rate"
 4. Review prediction with confidence metrics
 
-### Example 3: Environmental Assessment
+### Example 3: Run the ML Predictor
+1. Navigate to "ML Prediction"
+2. Select a process such as "Gold Cyanidation" or "Copper Flotation"
+3. Adjust the four process-specific features within the allowed ranges
+4. Review the live predicted recovery rate
+5. Compare it with the displayed offline best model and CV/holdout metrics
+
+### Example 4: Environmental Assessment
 1. Navigate to "Environmental Impact"
 2. Enter current metric values
-3. Get AI/ML recommendations for sustainability improvements
+3. Get AI recommendations for sustainability improvements
 4. Review cost-benefit analysis
 
 ---
@@ -233,6 +267,8 @@ Edit `src/services/openRouterService.js` to customize:
 
 - **Efficiency (%):** Percentage of theoretical maximum output achieved
 - **Recovery Rate (%):** Percentage of valuable metal extracted from ore
+- **CV R² / Holdout R²:** Offline model goodness-of-fit during cross-validation and test split evaluation
+- **MAE:** Mean Absolute Error between predicted and actual recovery
 - **Waste Reduction (%):** Improvement in waste minimization
 - **Energy Optimization (%):** Reduction in energy consumption
 - **CO2 Emissions:** Carbon footprint in kg equivalent
@@ -259,6 +295,11 @@ Edit `src/services/openRouterService.js` to customize:
 - Clear browser cache
 - Check browser console for errors
 - Ensure Recharts is properly installed
+
+### Issue: ML Prediction page looks outdated or inconsistent
+- Check that `src/data/ml_models_by_process.json` and `src/data/best_models_summary.json` are both updated from the latest training run
+- Rebuild with `npm run build` after replacing ML artefacts
+- Verify the selected process exists in both JSON files
 
 ### Issue: Styling not applied
 - Rebuild with `npm run build`
@@ -325,8 +366,6 @@ For issues or questions:
 **Created:** April 2026
 **Project Type:** Educational - AI/ML Application
 **Status:** Development ✅
-# AI/ML-in-Extractive-Metallurgy
-
-
+# AI-in-Extractive-Metallurgy
 
 
