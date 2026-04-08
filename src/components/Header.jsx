@@ -21,7 +21,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
           <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setCurrentPage('dashboard')}>
             <Zap className="text-blue-400" size={28} />
             <span className="text-xl font-bold text-white hidden sm:inline">
-              AI/ML Metallurgy
+              AI Metallurgy
             </span>
           </div>
 
@@ -78,4 +78,3 @@ const Header = ({ currentPage, setCurrentPage }) => {
 };
 
 export default Header;
-

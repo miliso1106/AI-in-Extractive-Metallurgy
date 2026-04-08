@@ -2,7 +2,7 @@
 
 ## Overview
 
-Your AI/ML Metallurgy Dashboard now includes a complete dataset management system with:
+Your AI Metallurgy Dashboard now includes a complete dataset management system with:
 - 10 sample metallurgical processes
 - Real-time data table display
 - Advanced filtering and sorting
@@ -356,12 +356,12 @@ Edit `src/pages/ProcessDataPage.jsx`:
 4. Try sorting and filtering
 5. Export to CSV for spreadsheet analysis
 
-### Integration with AI/ML Features
+### Integration with AI Features
 The data works with other dashboard features:
 
 **Process Analyzer:**
 - Use real data for optimization recommendations
-- Get AI/ML suggestions for process improvements
+- Get AI suggestions for process improvements
 
 **Recovery Prediction:**
 - Input parameters from dataset
@@ -369,7 +369,7 @@ The data works with other dashboard features:
 
 **Environmental Impact:**
 - Analyze actual environmental metrics
-- Get AI/ML recommendations for sustainability
+- Get AI recommendations for sustainability
 
 ---
 
@@ -420,7 +420,7 @@ For help with:
 - **Data structure:** See Field Descriptions above
 - **Using the table:** Check "How to Use" sections
 - **Adding data:** Follow "Update Dataset" instructions
-- **Integration:** See "Integration with AI/ML Features"
+- **Integration:** See "Integration with AI Features"
 
 ---
 
@@ -459,9 +459,9 @@ For help with:
 
 ---
 
-## CSV Upload and AI/ML Insights
+## CSV Upload and AI Insights
 
-You can now upload your own CSV file and generate an AI/ML insights table.
+You can now upload your own CSV file and generate an AI insights table.
 
 ### Upload CSV
 1. Open the "Process Data" page.
@@ -490,8 +490,7 @@ Recommended full set:
 - status
 - timestamp
 
-### AI/ML Insights Table
+### AI Insights Table
 1. Provide a short focus question (example: "Copper slag contains gold and silver. Suggest recovery steps and efficiency improvements.").
-2. Click "Analyze Dataset with AI/ML".
-3. The AI/ML returns a compact table of key issues, actions, and expected efficiency gains.
-
+2. Click "Analyze Dataset with AI".
+3. The AI returns a compact table of key issues, actions, and expected efficiency gains.

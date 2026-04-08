@@ -1,25 +1,25 @@
-﻿# ðŸ“š Project Documentation Index
+﻿# 📚 Project Documentation Index
 
-Welcome to the AI/ML Metallurgy Dashboard project! This file helps you navigate all documentation.
+Welcome to the AI Metallurgy Dashboard project! This file helps you navigate all documentation.
 
 ---
 
-## ðŸš€ **START HERE** - Getting Started (Pick one)
+## 🚀 **START HERE** - Getting Started (Pick one)
 
-### âš¡ For the Impatient (5 minutes)
-â†’ Read: [QUICKSTART.md](QUICKSTART.md)
+### ⚡ For the Impatient (5 minutes)
+→ Read: [QUICKSTART.md](QUICKSTART.md)
 - Minimal steps to get running
 - Basic usage instructions
 - Common issues
 
-### ðŸ“– For Beginners (15 minutes)
-â†’ Read: [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md)
+### 📖 For Beginners (15 minutes)
+→ Read: [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md)
 - Detailed step-by-step setup
 - Prerequisites and verification
 - Full troubleshooting guide
 
-### ðŸ“‹ For Complete Reference
-â†’ Read: [README.md](README.md)
+### 📋 For Complete Reference
+→ Read: [README.md](README.md)
 - Full project documentation
 - Feature descriptions
 - Technical architecture
@@ -27,7 +27,7 @@ Welcome to the AI/ML Metallurgy Dashboard project! This file helps you navigate 
 
 ---
 
-## ðŸŽ¯ **BY TASK** - Find What You Need
+## 🎯 **BY TASK** - Find What You Need
 
 ### "I want to run the app RIGHT NOW"
 1. Read [QUICKSTART.md](QUICKSTART.md)
@@ -44,20 +44,20 @@ Welcome to the AI/ML Metallurgy Dashboard project! This file helps you navigate 
 - Check [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md) - Common issues
 
 ### "I need to write my report"
-â†’ Go to: [REPORT_GUIDELINES.md](REPORT_GUIDELINES.md)
+→ Go to: [REPORT_GUIDELINES.md](REPORT_GUIDELINES.md)
 - Complete report structure
 - All 11 sections explained
 - What to include in each section
 - Report writing tips
 
 ### "What features does it have?"
-â†’ Go to: [README.md](README.md)
+→ Go to: [README.md](README.md)
 - Key Features section
 - Dashboard Components
 - Usage Examples
 
 ### "Tell me about the project"
-â†’ Go to: [CHANGELOG.md](CHANGELOG.md)
+→ Go to: [CHANGELOG.md](CHANGELOG.md)
 - Completion summary
 - What was built
 - Technology stack
@@ -65,7 +65,7 @@ Welcome to the AI/ML Metallurgy Dashboard project! This file helps you navigate 
 
 ---
 
-## ðŸ“ **FILES REFERENCE** - What Each File Does
+## 📁 **FILES REFERENCE** - What Each File Does
 
 ### Documentation Files
 | File | Purpose | Read Time |
@@ -96,9 +96,9 @@ Welcome to the AI/ML Metallurgy Dashboard project! This file helps you navigate 
 | `index.css` | Global styles |
 | `components/Header.jsx` | Navigation header |
 | `pages/Dashboard.jsx` | Home dashboard |
-| `pages/ProcessAnalyzer.jsx` | AI/ML optimization page |
-| `pages/RecoveryPrediction.jsx` | AI/ML prediction page |
-| `pages/EnvironmentalImpact.jsx` | AI/ML impact analysis page |
+| `pages/ProcessAnalyzer.jsx` | AI optimization page |
+| `pages/RecoveryPrediction.jsx` | AI prediction page |
+| `pages/EnvironmentalImpact.jsx` | AI impact analysis page |
 | `services/openRouterService.js` | API integration |
 
 ### Entry Point
@@ -108,7 +108,7 @@ Welcome to the AI/ML Metallurgy Dashboard project! This file helps you navigate 
 
 ---
 
-## ðŸ“Š **BY ROLE** - What to Read Based on Your Needs
+## 📊 **BY ROLE** - What to Read Based on Your Needs
 
 ### If You're a **Developer**
 1. Read [README.md](README.md) - Technical Architecture
@@ -126,9 +126,9 @@ Welcome to the AI/ML Metallurgy Dashboard project! This file helps you navigate 
 1. Run the app: `npm run dev`
 2. Show the 4 main pages:
    - Dashboard (metrics overview)
-   - Process Analyzer (AI/ML optimization)
-   - Recovery Prediction (AI/ML forecasting)
-   - Environmental Impact (AI/ML sustainability)
+   - Process Analyzer (AI optimization)
+   - Recovery Prediction (AI forecasting)
+   - Environmental Impact (AI sustainability)
 3. Reference [README.md](README.md) for talking points
 4. Mention tech stack from [CHANGELOG.md](CHANGELOG.md)
 
@@ -140,29 +140,29 @@ Welcome to the AI/ML Metallurgy Dashboard project! This file helps you navigate 
 
 ---
 
-## ðŸ†˜ **QUICK TROUBLESHOOTING**
+## 🆘 **QUICK TROUBLESHOOTING**
 
 ### "npm is not found"
-â†’ Install Node.js: https://nodejs.org/
+→ Install Node.js: https://nodejs.org/
 
 ### "Failed to get recommendations"
-â†’ Check your `.env` file has correct API key
+→ Check your `.env` file has correct API key
 
 ### "Port 3000 in use"
-â†’ The app will use a different port. Check terminal output.
+→ The app will use a different port. Check terminal output.
 
 ### "Module not found"
-â†’ Run: `npm install`
+→ Run: `npm install`
 
 ### "Styles look broken"
-â†’ Run: `npm run build` then `npm run preview`
+→ Run: `npm run build` then `npm run preview`
 
 ### "Still having issues?"
-â†’ Check [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md) Troubleshooting section
+→ Check [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md) Troubleshooting section
 
 ---
 
-## âœ… **PRE-LAUNCH CHECKLIST**
+## ✅ **PRE-LAUNCH CHECKLIST**
 
 Before going live:
 - [ ] Read [QUICKSTART.md](QUICKSTART.md)
@@ -176,7 +176,7 @@ Before going live:
 
 ---
 
-## ðŸ“ž **HELP HIERARCHY**
+## 📞 **HELP HIERARCHY**
 
 1. **First:** Check this INDEX.md - find your scenario
 2. **Second:** Read the recommended documentation file
@@ -186,7 +186,7 @@ Before going live:
 
 ---
 
-## ðŸŽ¯ **DOCUMENTATION READING ORDER**
+## 🎯 **DOCUMENTATION READING ORDER**
 
 ### For First-Time Users
 1. This file (INDEX.md) - 3 min
@@ -207,7 +207,7 @@ Before going live:
 
 ---
 
-## ðŸš€ **QUICK REFERENCE COMMANDS**
+## 🚀 **QUICK REFERENCE COMMANDS**
 
 ```bash
 # Install dependencies
@@ -228,7 +228,7 @@ npm run lint
 
 ---
 
-## ðŸ“ **COMMON QUESTIONS**
+## 📝 **COMMON QUESTIONS**
 
 **Q: Where do I put my API key?**
 A: In the `.env` file, replace `your_api_key_here` with your Open Router API key.
@@ -250,18 +250,18 @@ A: Yes! All source code is in the `src/` folder. Modify as needed.
 
 ---
 
-## ðŸ† **SUCCESS INDICATORS**
+## 🏆 **SUCCESS INDICATORS**
 
 You'll know everything is working when:
-- âœ… App opens at localhost:3000
-- âœ… You see the dark blue dashboard
-- âœ… All 4 navigation tabs are visible
-- âœ… Charts and metrics display
-- âœ… API recommendations appear
+- ✅ App opens at localhost:3000
+- ✅ You see the dark blue dashboard
+- ✅ All 4 navigation tabs are visible
+- ✅ Charts and metrics display
+- ✅ API recommendations appear
 
 ---
 
-## ðŸ“š **ADDITIONAL RESOURCES**
+## 📚 **ADDITIONAL RESOURCES**
 
 ### Official Documentation
 - React: https://react.dev
@@ -281,16 +281,15 @@ You'll know everything is working when:
 
 ---
 
-## ðŸŽ‰ **YOU'RE ALL SET!**
+## 🎉 **YOU'RE ALL SET!**
 
 Pick your starting point above and get started! 
 
 **Recommended:** Start with [QUICKSTART.md](QUICKSTART.md) if you want to see it running in 5 minutes.
 
-Good luck with your project! ðŸš€
+Good luck with your project! 🚀
 
 ---
 
 **Last Updated:** April 2026
 **Project Version:** 1.0.0
-

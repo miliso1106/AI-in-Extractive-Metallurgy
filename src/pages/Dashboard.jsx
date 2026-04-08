@@ -57,7 +57,7 @@ const Dashboard = ({ setCurrentPage }) => {
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
           Process Optimization Dashboard
         </h1>
-        <p className="text-slate-400">Real-time AI/ML-driven extractive metallurgy optimization</p>
+        <p className="text-slate-400">Real-time AI-driven extractive metallurgy optimization</p>
       </div>
 
       {/* Key Metrics */}
@@ -174,7 +174,7 @@ const Dashboard = ({ setCurrentPage }) => {
             <div className="flex items-start p-3 bg-blue-900 bg-opacity-20 border border-blue-700 rounded-lg">
               <AlertCircle className="text-blue-400 mr-3 flex-shrink-0 mt-0.5" size={20} />
               <div>
-                <p className="font-semibold text-blue-400">AI/ML Recommendation</p>
+                <p className="font-semibold text-blue-400">AI Recommendation</p>
                 <p className="text-blue-200 text-sm">Consider adjusting leaching temperature by +2 C for improved recovery</p>
               </div>
             </div>
@@ -243,4 +243,3 @@ const Dashboard = ({ setCurrentPage }) => {
 };
 
 export default Dashboard;
-

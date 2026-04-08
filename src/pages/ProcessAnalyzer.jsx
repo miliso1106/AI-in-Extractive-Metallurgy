@@ -61,7 +61,7 @@ const ProcessAnalyzer = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
           Process Analyzer
         </h1>
-        <p className="text-slate-400">Get AI/ML-powered optimization recommendations for your extraction process</p>
+        <p className="text-slate-400">Get AI-powered optimization recommendations for your extraction process</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -153,7 +153,7 @@ const ProcessAnalyzer = () => {
               ) : (
                 <>
                   <Send size={20} />
-                  <span>Get AI/ML Recommendations</span>
+                  <span>Get AI Recommendations</span>
                 </>
               )}
             </button>
@@ -163,7 +163,7 @@ const ProcessAnalyzer = () => {
         {/* Results */}
         <div className="card">
           <div className="card-header">
-            <h2 className="text-xl font-semibold text-white">AI/ML Recommendations</h2>
+            <h2 className="text-xl font-semibold text-white">AI Recommendations</h2>
           </div>
           <div className="card-body">
             {error && (
@@ -224,8 +224,8 @@ const ProcessAnalyzer = () => {
               <div className="flex flex-col items-center justify-center h-64 text-center">
                 <p className="text-slate-400">
                   {loading
-                    ? 'AI/ML is analyzing your process parameters...'
-                    : 'Fill in the parameters and click "Get AI/ML Recommendations" to see optimization suggestions'}
+                    ? 'AI is analyzing your process parameters...'
+                    : 'Fill in the parameters and click "Get AI Recommendations" to see optimization suggestions'}
                 </p>
               </div>
             )}
@@ -237,4 +237,3 @@ const ProcessAnalyzer = () => {
 };
 
 export default ProcessAnalyzer;
-

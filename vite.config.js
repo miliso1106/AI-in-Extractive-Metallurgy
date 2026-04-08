@@ -1,4 +1,4 @@
-﻿import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { OPENROUTER_BASE_URL, buildPrompt, extractFirstJsonObject } from './api/openrouter.shared.js'
 
@@ -73,30 +73,22 @@ const openRouterDev = () => ({
         } catch (error) {
           res.statusCode = 500
           res.setHeader('Content-Type', 'application/json')
-          res.end(JSON.stringify({ error: 'Failed to call AI/ML service.' }))
+          res.end(JSON.stringify({ error: 'Failed to call AI service.' }))
         }
       })
     })
   },
 })
 
-export default defineConfig({
-  plugins: [react(), openRouterDev()],
-  server: {
-    port: 3000,
-    open: true
-  },
-  build: {
-    chunkSizeWarningLimit: 700,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          react: ['react', 'react-dom'],
-          charts: ['recharts'],
-          icons: ['lucide-react'],
-        },
-      },
-    },
-  },
-})
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+  process.env.OPENROUTER_API_KEY = env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEY
 
+  return {
+    plugins: [react(), openRouterDev()],
+    server: {
+      port: 3000,
+      open: true
+    }
+  }
+})

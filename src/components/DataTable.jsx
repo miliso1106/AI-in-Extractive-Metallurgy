@@ -1,12 +1,26 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { ChevronUp, ChevronDown, Search, AlertCircle, CheckCircle, AlertTriangle } from 'lucide-react';
+
+const conditionFallbackKeys = {
+  1: 'oreGrade',
+  2: 'temperature',
+  3: 'pressure',
+  4: 'leachingTime',
+};
 
 const DataTable = ({ data }) => {
   const [sortConfig, setSortConfig] = useState({ key: 'efficiency', direction: 'desc' });
   const [searchTerm, setSearchTerm] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
 
-  // Filter and sort data
+  const hasDetailedProcessColumns = data.some(
+    (item) =>
+      item.condition_1_name ||
+      item.condition_2_name ||
+      item.condition_3_name ||
+      item.condition_4_name
+  );
+
   const filteredData = data
     .filter((item) => {
       const processName = String(item.processName ?? '');
@@ -71,9 +85,28 @@ const DataTable = ({ data }) => {
     </th>
   );
 
+  const renderPlainCell = (value, formatter = (cell) => String(cell ?? 'N/A')) => (
+    <td className="px-4 py-3 text-slate-300">{formatter(value)}</td>
+  );
+
+  const renderConditionCell = (item, index) => {
+    const label = item[`condition_${index}_name`];
+    const rawValue = item[`condition_${index}_value`];
+    const fallbackValue = item[conditionFallbackKeys[index]];
+    const value = rawValue ?? fallbackValue;
+
+    return (
+      <td className="px-4 py-3">
+        <div className="min-w-[170px]">
+          <p className="text-white text-xs font-medium">{label || `Condition ${index}`}</p>
+          <p className="text-slate-300 text-sm mt-1">{value === undefined || value === null || value === '' ? 'N/A' : String(value)}</p>
+        </div>
+      </td>
+    );
+  };
+
   return (
     <div className="space-y-4">
-      {/* Controls */}
       <div className="flex flex-col md:flex-row gap-4">
         <div className="flex-1 relative">
           <Search className="absolute left-3 top-3 text-slate-400" size={18} />
@@ -98,16 +131,31 @@ const DataTable = ({ data }) => {
         </select>
       </div>
 
-      {/* Table */}
       <div className="overflow-x-auto rounded-lg border border-slate-700">
         <table className="w-full text-sm">
           <thead className="bg-slate-900 border-b border-slate-700">
             <tr>
-              <TableHeader label="Process Name" sortKey="processName" columnClass="w-40" />
-              <TableHeader label="Ore Grade (%)" sortKey="oreGrade" columnClass="w-28" />
-              <TableHeader label="Temp (C)" sortKey="temperature" columnClass="w-24" />
+              <TableHeader label="Process Name" sortKey="processName" columnClass="w-48" />
+              {hasDetailedProcessColumns ? (
+                <>
+                  <TableHeader label="Condition 1" sortKey="condition_1_value" columnClass="w-44" />
+                  <TableHeader label="Condition 2" sortKey="condition_2_value" columnClass="w-44" />
+                  <TableHeader label="Condition 3" sortKey="condition_3_value" columnClass="w-44" />
+                  <TableHeader label="Condition 4" sortKey="condition_4_value" columnClass="w-44" />
+                </>
+              ) : (
+                <>
+                  <TableHeader label="Ore Grade (%)" sortKey="oreGrade" columnClass="w-28" />
+                  <TableHeader label="Temp (C)" sortKey="temperature" columnClass="w-24" />
+                  <TableHeader label="Pressure" sortKey="pressure" columnClass="w-24" />
+                  <TableHeader label="Leach Time" sortKey="leachingTime" columnClass="w-28" />
+                </>
+              )}
               <TableHeader label="Recovery (%)" sortKey="recoveryRate" columnClass="w-28" />
               <TableHeader label="Efficiency (%)" sortKey="efficiency" columnClass="w-28" />
+              <TableHeader label="Waste (t/day)" sortKey="wasteGenerated" columnClass="w-28" />
+              <TableHeader label="Water (m3/day)" sortKey="waterUsage" columnClass="w-32" />
+              <TableHeader label="Energy (MWh/day)" sortKey="energyConsumption" columnClass="w-32" />
               <TableHeader label="CO2 (kg/day)" sortKey="co2Emissions" columnClass="w-28" />
               <TableHeader label="Status" sortKey="status" columnClass="w-28" />
             </tr>
@@ -120,8 +168,21 @@ const DataTable = ({ data }) => {
                   className="hover:bg-slate-750 transition border-b border-slate-700 hover:bg-slate-700"
                 >
                   <td className="px-4 py-3 text-white font-medium">{item.processName}</td>
-                  <td className="px-4 py-3 text-slate-300">{Number(item.oreGrade ?? 0).toFixed(2)}</td>
-                  <td className="px-4 py-3 text-slate-300">{Number(item.temperature ?? 0)}</td>
+                  {hasDetailedProcessColumns ? (
+                    <>
+                      {renderConditionCell(item, 1)}
+                      {renderConditionCell(item, 2)}
+                      {renderConditionCell(item, 3)}
+                      {renderConditionCell(item, 4)}
+                    </>
+                  ) : (
+                    <>
+                      {renderPlainCell(item.oreGrade, (value) => Number(value ?? 0).toFixed(2))}
+                      {renderPlainCell(item.temperature, (value) => `${Number(value ?? 0)}`)}
+                      {renderPlainCell(item.pressure, (value) => `${Number(value ?? 0)}`)}
+                      {renderPlainCell(item.leachingTime, (value) => `${Number(value ?? 0)}`)}
+                    </>
+                  )}
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-2">
                       <span className="text-slate-300">{Number(item.recoveryRate ?? 0).toFixed(1)}</span>
@@ -146,6 +207,9 @@ const DataTable = ({ data }) => {
                       </div>
                     </div>
                   </td>
+                  {renderPlainCell(item.wasteGenerated)}
+                  {renderPlainCell(item.waterUsage)}
+                  {renderPlainCell(item.energyConsumption)}
                   <td className="px-4 py-3 text-slate-300">{item.co2Emissions}</td>
                   <td className="px-4 py-3">
                     <StatusBadge status={item.status} />
@@ -154,7 +218,7 @@ const DataTable = ({ data }) => {
               ))
             ) : (
               <tr>
-                <td colSpan="7" className="px-4 py-8 text-center text-slate-400">
+                <td colSpan="11" className="px-4 py-8 text-center text-slate-400">
                   No processes found matching your criteria
                 </td>
               </tr>
@@ -163,7 +227,6 @@ const DataTable = ({ data }) => {
         </table>
       </div>
 
-      {/* Summary */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
         <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
           <p className="text-slate-400">Total Processes</p>

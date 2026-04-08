@@ -9,13 +9,13 @@
 
   const data = await response.json();
   if (!response.ok) {
-    throw new Error(data?.error || 'AI/ML request failed');
+    throw new Error(data?.error || 'AI request failed');
   }
   return data;
 };
 
 /**
- * Get AI/ML optimization recommendations for a specific metallurgy process
+ * Get AI optimization recommendations for a specific metallurgy process
  */
 export const getProcessOptimization = async (processData) => {
   const result = await callApi('process_opt', processData);
@@ -53,4 +53,3 @@ export const askMetallurgyQuestion = async (question) => {
   const result = await callApi('question', { question });
   return result.data;
 };
-

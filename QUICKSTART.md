@@ -40,14 +40,14 @@ The app will open automatically at `http://localhost:3000` ðŸŽ‰
 
 ### 2. Process Analyzer
 - Input your current process parameters
-- Click "Get AI/ML Recommendations"
+- Click "Get AI Recommendations"
 - Get specific suggestions to improve efficiency
-- AI/ML will analyze temperature, pressure, issues, etc.
+- AI will analyze temperature, pressure, issues, etc.
 
 ### 3. Recovery Prediction
 - Input leaching parameters (ore grade, time, temperature, etc.)
 - Click "Predict Recovery Rate"
-- See AI/ML's prediction of how much metal you'll recover
+- See AI's prediction of how much metal you'll recover
 - Get confidence levels and risk assessments
 
 ### 4. Environmental Impact
@@ -74,13 +74,13 @@ The app will open automatically at `http://localhost:3000` ðŸŽ‰
 âœ… **Pro Tips:**
 - Save your parameter values (temperature, pressure ranges) for your specific process
 - Use realistic values from your actual extraction process
-- Read the AI/ML recommendations carefully - they're based on metallurgy principles
+- Read the AI recommendations carefully - they're based on metallurgy principles
 - Check back daily for new optimization opportunities as your process parameters change
 
 âš ï¸ **Important:**
 - Never share your `.env` file or API key
 - Close the app when not using it (prevents unnecessary API calls)
-- The AI/ML uses Open Router API, so you need internet connection
+- The AI uses Open Router API, so you need internet connection
 - Free API credits are limited, so test carefully before running production
 
 ---
@@ -109,7 +109,7 @@ Your Project
 â”œâ”€â”€ src/                    â† All your code goes here
 â”‚   â”œâ”€â”€ pages/            â† The 4 main pages
 â”‚   â”œâ”€â”€ components/       â† Reusable components (Header)
-â”‚   â”œâ”€â”€ services/         â† AI/ML integration code
+â”‚   â”œâ”€â”€ services/         â† AI integration code
 â”œâ”€â”€ public/               â† Images, static files
 â”œâ”€â”€ package.json          â† Dependency list
 â”œâ”€â”€ .env                  â† YOUR API KEY (keep secret!)
@@ -137,5 +137,4 @@ Your Project
 4. Check React docs: https://react.dev
 
 Happy optimizing! ðŸš€
-
 
