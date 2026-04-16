@@ -2,6 +2,42 @@
 import { getProcessOptimization } from '../services/openRouterService';
 import { Loader, Send } from 'lucide-react';
 
+const safeJsonParse = (text) => {
+  try {
+    return JSON.parse(text);
+  } catch {
+    return null;
+  }
+};
+
+const extractJsonObject = (text) => {
+  if (!text) return null;
+  const cleaned = String(text).replace(/```json/gi, '```').replace(/```/g, '').trim();
+  const direct = safeJsonParse(cleaned);
+  if (direct) return direct;
+
+  const match = cleaned.match(/\{[\s\S]*\}/);
+  if (!match) return null;
+  return safeJsonParse(match[0]);
+};
+
+const toDisplayText = (value) => {
+  if (value === null || value === undefined || value === '') return 'N/A';
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number' || typeof value === 'boolean') return String(value);
+  return JSON.stringify(value, null, 2);
+};
+
+const timelineItemsFromValue = (value) => {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  return Object.entries(value)
+    .map(([label, detail]) => ({
+      label,
+      detail: toDisplayText(detail),
+    }))
+    .filter((item) => item.detail && item.detail !== 'N/A');
+};
+
 const ProcessAnalyzer = () => {
   const [formData, setFormData] = useState({
     processType: 'Copper Leaching',
@@ -17,21 +53,63 @@ const ProcessAnalyzer = () => {
 
   const parsedRecommendations = useMemo(() => {
     if (!recommendations) return null;
-    try {
-      return JSON.parse(recommendations);
-    } catch {
-      return null;
-    }
+    return extractJsonObject(recommendations);
   }, [recommendations]);
 
   const recommendationItems = useMemo(() => {
     const recs = parsedRecommendations?.recommendations;
-    if (Array.isArray(recs)) return recs.filter(Boolean);
+    if (Array.isArray(recs)) {
+      return recs
+        .map((item) => {
+          if (typeof item === 'string') return item.trim();
+          if (item && typeof item === 'object') {
+            return item.description || item.details || item.id || JSON.stringify(item);
+          }
+          return '';
+        })
+        .filter(Boolean);
+    }
     if (typeof recs === 'string') {
       return recs.split('\n').map((line) => line.trim()).filter(Boolean);
     }
     return null;
   }, [parsedRecommendations]);
+
+  const riskItems = useMemo(() => {
+    const risks = parsedRecommendations?.risks;
+    if (Array.isArray(risks)) {
+      return risks
+        .map((item) => {
+          if (typeof item === 'string') {
+            return { summary: item.trim() };
+          }
+          if (item && typeof item === 'object') {
+            return {
+              summary: item.risk || item.summary || item.title || 'Risk',
+              probability: item.probability,
+              impact: item.impact,
+              mitigation: item.mitigation,
+            };
+          }
+          return null;
+        })
+        .filter(Boolean);
+    }
+    if (risks && typeof risks === 'object') {
+      return [{
+        summary: risks.risk || risks.summary || risks.title || 'Risk',
+        probability: risks.probability,
+        impact: risks.impact,
+        mitigation: risks.mitigation,
+      }];
+    }
+    return null;
+  }, [parsedRecommendations]);
+
+  const timelineItems = useMemo(
+    () => timelineItemsFromValue(parsedRecommendations?.timeline),
+    [parsedRecommendations],
+  );
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -179,15 +257,26 @@ const ProcessAnalyzer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="bg-slate-700 p-4 rounded-lg">
                         <p className="text-xs text-slate-400">Expected Improvement</p>
-                        <p className="text-lg font-semibold text-green-300">
-                          {parsedRecommendations.expectedImprovement || 'N/A'}
+                        <p className="text-lg font-semibold text-green-300 whitespace-pre-wrap">
+                          {toDisplayText(parsedRecommendations.expectedImprovement)}
                         </p>
                       </div>
                       <div className="bg-slate-700 p-4 rounded-lg">
                         <p className="text-xs text-slate-400">Implementation Timeline</p>
-                        <p className="text-lg font-semibold text-blue-300">
-                          {parsedRecommendations.timeline || 'N/A'}
-                        </p>
+                        {timelineItems?.length ? (
+                          <div className="space-y-2">
+                            {timelineItems.map((item) => (
+                              <div key={item.label}>
+                                <p className="text-xs uppercase tracking-wide text-slate-400">{item.label}</p>
+                                <p className="text-sm font-semibold text-blue-300 whitespace-pre-wrap">{item.detail}</p>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-lg font-semibold text-blue-300 whitespace-pre-wrap">
+                            {toDisplayText(parsedRecommendations.timeline)}
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -207,9 +296,31 @@ const ProcessAnalyzer = () => {
 
                     <div className="bg-slate-700 p-4 rounded-lg">
                       <h3 className="font-semibold text-white mb-3">Risk Factors</h3>
-                      <p className="text-sm text-slate-200 whitespace-pre-wrap">
-                        {parsedRecommendations.risks || 'N/A'}
-                      </p>
+                      {riskItems?.length ? (
+                        <div className="space-y-3">
+                          {riskItems.map((risk, idx) => (
+                            <div key={`${risk.summary}-${idx}`} className="rounded border border-slate-600 p-3">
+                              <p className="text-sm font-semibold text-white">{toDisplayText(risk.summary)}</p>
+                              <p className="text-sm text-slate-200 mt-2">
+                                <span className="text-slate-400">Probability: </span>
+                                {toDisplayText(risk.probability)}
+                              </p>
+                              <p className="text-sm text-slate-200">
+                                <span className="text-slate-400">Impact: </span>
+                                {toDisplayText(risk.impact)}
+                              </p>
+                              <p className="text-sm text-slate-200 whitespace-pre-wrap">
+                                <span className="text-slate-400">Mitigation: </span>
+                                {toDisplayText(risk.mitigation)}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-sm text-slate-200 whitespace-pre-wrap">
+                          {toDisplayText(parsedRecommendations.risks)}
+                        </p>
+                      )}
                     </div>
                   </>
                 ) : (

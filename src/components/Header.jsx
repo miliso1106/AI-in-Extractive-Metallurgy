@@ -6,10 +6,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
 
   const navItems = [
     { id: 'dashboard', label: 'Dashboard' },
+    { id: 'ml', label: 'ML Prediction' },
     { id: 'data', label: 'Process Data' },
     { id: 'analyzer', label: 'Process Analyzer' },
-    { id: 'recovery', label: 'Recovery Prediction' },
-    { id: 'ml', label: 'ML Prediction' },
     { id: 'environmental', label: 'Environmental Impact' },
   ];
 

@@ -1,9 +1,8 @@
 ﻿import React, { useState, useMemo, useEffect } from 'react';
 import DataTable from '../components/DataTable';
 import SimpleTable from '../components/SimpleTable';
-import processDataFile from '../data/processData.json';
 import { analyzeDatasetInsights, askMetallurgyQuestion } from '../services/openRouterService';
-import { Database, Download, RefreshCw, Upload, Wand2 } from 'lucide-react';
+import { Database, Download, Upload, Wand2 } from 'lucide-react';
 
 const numericFields = [
   'id',
@@ -214,7 +213,7 @@ const buildProcessParameterSummary = (rows) => {
 };
 
 const ProcessDataPage = () => {
-  const [data, setData] = useState(processDataFile.processes);
+  const [data, setData] = useState([]);
   const [isExporting, setIsExporting] = useState(false);
   const [uploadError, setUploadError] = useState(null);
   const [uploadedName, setUploadedName] = useState('');
@@ -292,20 +291,6 @@ const ProcessDataPage = () => {
     link.href = `data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`;
     link.download = filename;
     link.click();
-  };
-
-  const handleRefresh = () => {
-    setData(processDataFile.processes);
-    setUploadError(null);
-    setUploadedName('');
-    setCsvTable(null);
-    setCsvObjects([]);
-    setAnalysisTable(null);
-    setAnalysisRaw('');
-    setRowCount(processDataFile.processes.length);
-    setSampleCount(0);
-    setActiveFileName('');
-    setValidationSummary('');
   };
 
   const handleUpload = (event) => {
@@ -442,7 +427,7 @@ const ProcessDataPage = () => {
         }
       }
     } catch (err) {
-      setAnalysisError('Failed to analyze dataset. Please check your API key and try again.');
+      setAnalysisError(err?.message || 'Failed to analyze dataset.');
     } finally {
       setIsAnalyzing(false);
     }
@@ -541,13 +526,6 @@ const ProcessDataPage = () => {
             >
               <Download size={18} />
               {isExporting ? 'Exporting...' : 'Export to CSV'}
-            </button>
-            <button
-              onClick={handleRefresh}
-              className="btn-secondary w-full flex items-center justify-center gap-2"
-            >
-              <RefreshCw size={18} />
-              Use Sample Data
             </button>
             <label className="btn-secondary w-full flex items-center justify-center gap-2 cursor-pointer">
               <Upload size={18} />
@@ -700,7 +678,7 @@ const ProcessDataPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-300">
             <div className="bg-slate-800 p-3 rounded border border-slate-700">
               <div className="text-slate-400">Active File</div>
-              <div className="font-semibold">{activeFileName || 'Sample data'}</div>
+              <div className="font-semibold">{activeFileName || 'No file uploaded'}</div>
             </div>
             <div className="bg-slate-800 p-3 rounded border border-slate-700">
               <div className="text-slate-400">Rows Loaded</div>

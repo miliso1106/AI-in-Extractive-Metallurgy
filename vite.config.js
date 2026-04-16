@@ -51,6 +51,14 @@ const openRouterDev = () => ({
           })
 
           const data = await response.json()
+          if (!response.ok) {
+            const upstreamMessage = data?.error?.message || data?.error || 'OpenRouter request failed.'
+            res.statusCode = response.status
+            res.setHeader('Content-Type', 'application/json')
+            res.end(JSON.stringify({ error: upstreamMessage }))
+            return
+          }
+
           const content = data?.choices?.[0]?.message?.content || ''
 
           if (task === 'dataset_insights') {
@@ -73,7 +81,7 @@ const openRouterDev = () => ({
         } catch (error) {
           res.statusCode = 500
           res.setHeader('Content-Type', 'application/json')
-          res.end(JSON.stringify({ error: 'Failed to call AI service.' }))
+          res.end(JSON.stringify({ error: error?.message || 'Failed to call AI service.' }))
         }
       })
     })

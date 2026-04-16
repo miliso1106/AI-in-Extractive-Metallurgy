@@ -1,6 +1,5 @@
 ﻿import { OPENROUTER_BASE_URL, buildPrompt, extractFirstJsonObject } from './openrouter.shared.js';
 
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 
 const jsonResponse = (res, status, data) => {
   res.statusCode = status;
@@ -14,7 +13,8 @@ export default async function handler(req, res) {
     return jsonResponse(res, 405, { error: 'Method not allowed' });
   }
 
-  if (!OPENROUTER_API_KEY) {
+  const openRouterApiKey = process.env.OPENROUTER_API_KEY;
+  if (!openRouterApiKey) {
     return jsonResponse(res, 500, { error: 'OPENROUTER_API_KEY is not set on the server.' });
   }
 
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     const response = await fetch(`${OPENROUTER_BASE_URL}/chat/completions`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+        'Authorization': `Bearer ${openRouterApiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -41,6 +41,11 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
+    if (!response.ok) {
+      const upstreamMessage = data?.error?.message || data?.error || 'OpenRouter request failed.';
+      return jsonResponse(res, response.status, { error: upstreamMessage });
+    }
+
     const content = data?.choices?.[0]?.message?.content || '';
 
     if (task === 'dataset_insights') {
@@ -53,7 +58,7 @@ export default async function handler(req, res) {
 
     return jsonResponse(res, 200, { ok: true, data: content });
   } catch (error) {
-    return jsonResponse(res, 500, { error: 'Failed to call AI/ML service.' });
+    return jsonResponse(res, 500, { error: error?.message || 'Failed to call AI/ML service.' });
   }
 }
 

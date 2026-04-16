@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[top=2.4cm,bottom=2.4cm,left=2.6cm,right=2.6cm]{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setstretch{1.12}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\begin{titlepage}
+\centering
+\vspace*{1.8cm}
+
+{\Large National Institute of Technology Rourkela\par}
+\vspace{0.3cm}
+{\large Department of Metallurgical and Materials Engineering\par}
+\vspace{2.2cm}
+
+{\LARGE\bfseries AI-Driven Dashboard for Extractive Metallurgy Process Optimization\par}
+\vspace{0.8cm}
+
+{\large A Short Project Report\par}
+\vspace{2.2cm}
+
+\begin{tabular}{>{\bfseries}p{4cm}p{8cm}}
+Submitted by: & Soumili Dey \\
+Roll No.: & 241MT049 \\
+Course: & AI in Extractive Metallurgy \\
+Submitted to: & Dr.\ S B Arya \\
+\end{tabular}
+
+\vfill
+{\large April 2026\par}
+\end{titlepage}
+
+\clearpage
+\pagenumbering{arabic}
+
+\section*{1. Introduction}
+
+Extractive metallurgy deals with recovering valuable metals from ores through operations such as leaching, flotation, roasting, magnetic separation, and smelting. These processes are controlled by multiple operating variables including ore grade, temperature, pressure, pH, reagent dosage, residence time, and feed rate. Small deviations in these variables can change metal recovery, energy use, and waste generation. In industry, operators often depend on experience and delayed laboratory feedback, so decision-making may not always be fast or data-driven.
+
+This project presents a compact AI-driven dashboard that helps users monitor process behavior, inspect curated metallurgical datasets, obtain optimization suggestions, predict recovery rates, and evaluate environmental impact. The main goal is to show how artificial intelligence and machine learning can support extractive metallurgy by turning process data into practical insights. Instead of building only a theoretical model, the project combines a working web application with process-specific machine learning artifacts and natural-language analysis. This makes the system useful both as a demonstration tool and as a simple decision-support platform for metallurgical applications.
+
+\section*{2. System Overview}
+
+The project is implemented as a React and Vite web application with a multi-page dashboard. Tailwind CSS is used for styling, while Recharts is used for data visualization. The frontend includes five major modules:
+
+\begin{itemize}[leftmargin=1.2cm,itemsep=0.2em]
+\item \textbf{Dashboard:} shows overall KPIs such as process efficiency, metal recovery, waste reduction potential, and energy optimization potential.
+\item \textbf{Process Data Page:} displays the curated metallurgy dataset, supports CSV upload and export, and summarizes parameter ranges across different process types.
+\item \textbf{Process Analyzer:} accepts process inputs such as efficiency, temperature, pressure, and issues, then calls the OpenRouter API to generate optimization recommendations.
+\item \textbf{ML Prediction:} performs browser-side recovery prediction using exported linear regression artifacts and also shows the best offline model metrics for each process.
+\item \textbf{Environmental Impact Analysis:} evaluates waste, water usage, energy consumption, and CO\textsubscript{2} emissions, then generates sustainability guidance using AI analysis.
+\end{itemize}
+
+The architecture combines two complementary AI layers. The first layer is \textbf{LLM-based reasoning}, where OpenRouter is used to generate human-readable recommendations for process improvement and environmental management. The second layer is \textbf{deterministic ML prediction}, where trained model artifacts are exported to JSON and used in the frontend for direct numerical prediction. This hybrid design is one of the strengths of the project because it provides both numerical outputs and explanation-oriented assistance.
+
+\section*{3. Dataset and Methodology}
+
+The data workflow is based on a curated multi-process metallurgy dataset stored inside the repository. The main training summary shows \textbf{10 process categories} with \textbf{20 samples each}, giving a total of about \textbf{200 records}. The processes include Copper Heap Leach, Copper Flotation, Gold Cyanidation, Silver Leaching, Zinc Roasting, Lead Smelting, Cobalt Leaching, Nickel Laterite (HPAL), Iron Magnetite, and Aluminum Bauxite (Bayer). For each process, four process-specific condition values are used as input features and recovery rate is used as the prediction target.
+
+The machine learning workflow compares four regression models: Linear Regression, Random Forest, Support Vector Regression (RBF), and XGBoost. Model quality is measured using cross-validation \(R^2\), cross-validation MAE, holdout \(R^2\), and holdout MAE. The average benchmark results generated by the repository are summarized in Table~1.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{l>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\toprule
+\textbf{Model} & \textbf{CV $R^2$} & \textbf{CV MAE} & \textbf{Holdout $R^2$} & \textbf{Holdout MAE} \\
+\midrule
+Random Forest & 0.862 & 0.927 & 0.937 & 1.217 \\
+XGBoost & 0.831 & 1.289 & 0.938 & 1.168 \\
+Linear Regression & 0.807 & 1.262 & 0.833 & 1.615 \\
+SVR (RBF) & -0.169 & 2.849 & 0.721 & 2.611 \\
+\bottomrule
+\end{tabularx}
+
+\textbf{Table 1:} Average model performance across all process datasets.
+\end{center}
+
+These results show that Random Forest is the most consistent model overall, while XGBoost also performs strongly on holdout data. Linear Regression gives lower average accuracy, but it is still valuable because it is transparent, lightweight, and easy to deploy inside the browser. For this reason, the live prediction page currently uses linear surrogate models for fast client-side inference, while also displaying the best offline model for each process. According to the exported summary, Random Forest is the best model for most processes, whereas Linear Regression performs best for Gold Cyanidation and Zinc Roasting, and XGBoost performs best for Lead Smelting.
+
+\section*{4. Results, Significance, and Conclusion}
+
+The project successfully demonstrates a practical AI workflow for extractive metallurgy. The dashboard page reports an average process efficiency of about \textbf{87.3\%} and an average recovery rate near \textbf{90\%}, along with example waste-reduction and energy-optimization opportunities of \textbf{34.2\%} and \textbf{28.5\%}. The Process Analyzer and Environmental Impact pages show how language models can transform raw input values into structured recommendations, risk notes, and action plans. Meanwhile, the ML Prediction page gives a transparent numerical estimate of recovery using process-specific feature ranges and saved coefficients.
+
+An important contribution of the project is that it does not treat metallurgy as a single generic task. Instead, it separates individual metallurgical routes and compares model behavior process by process. This is useful because operating conditions for cyanidation, flotation, smelting, and leaching are fundamentally different. The Process Data page also improves usability by helping users inspect records, upload custom CSV data, and understand the meaning and range of process variables.
+
+From an academic point of view, the project shows how AI can support metallurgical decision-making in three ways: prediction, explanation, and monitoring. Prediction is handled by ML models trained on process data. Explanation is handled by the LLM-based modules that produce understandable recommendations. Monitoring is handled by the dashboard and dataset views. Together, these components provide a simple but meaningful decision-support environment for students and practitioners.
+
+The present system still has scope for improvement. The dataset is relatively small, and real industrial deployment would require much larger historical data, stronger validation, and direct links to sensors or plant information systems. Future work can include real-time data streaming, anomaly detection, multi-user access, PDF export, and browser support for non-linear model inference. Even with these limitations, the current project clearly demonstrates that AI and ML can improve the analysis, interpretation, and optimization of extractive metallurgy processes. In conclusion, the dashboard is a successful educational and technical prototype that connects metallurgical engineering with modern data-driven tools in a clear and practical manner.
+
+\end{document}

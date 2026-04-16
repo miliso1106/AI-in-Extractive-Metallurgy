@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { TrendingUp, AlertCircle, CheckCircle, Database } from 'lucide-react';
+import { TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
 import processDataFile from '../data/processData.json';
 
 const Dashboard = ({ setCurrentPage }) => {
@@ -178,63 +178,6 @@ const Dashboard = ({ setCurrentPage }) => {
                 <p className="text-blue-200 text-sm">Consider adjusting leaching temperature by +2 C for improved recovery</p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Process Data Preview */}
-      <div className="card">
-        <div className="card-header flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Database className="text-blue-400" size={20} />
-            <h2 className="text-xl font-semibold text-white">Recent Process Data</h2>
-          </div>
-          <button onClick={() => setCurrentPage && setCurrentPage('data')} className="text-blue-400 hover:text-blue-300 text-sm font-medium">
-            View All
-          </button>
-        </div>
-        <div className="card-body">
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-slate-700">
-                  <th className="text-left px-4 py-2 text-slate-300 font-semibold">Process</th>
-                  <th className="text-left px-4 py-2 text-slate-300 font-semibold">Recovery %</th>
-                  <th className="text-left px-4 py-2 text-slate-300 font-semibold">Efficiency %</th>
-                  <th className="text-left px-4 py-2 text-slate-300 font-semibold">Status</th>
-                  <th className="text-left px-4 py-2 text-slate-300 font-semibold">CO2 (kg)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {processDataFile.processes.slice(0, 5).map((process) => (
-                  <tr key={process.id} className="border-b border-slate-700 hover:bg-slate-700 transition">
-                    <td className="px-4 py-2 text-white font-medium">{process.processName}</td>
-                    <td className="px-4 py-2 text-slate-300">{process.recoveryRate.toFixed(1)}%</td>
-                    <td className="px-4 py-2 text-slate-300">{process.efficiency.toFixed(1)}%</td>
-                    <td className="px-4 py-2">
-                      <span
-                        className={`px-2 py-1 rounded text-xs font-semibold ${
-                          process.status === 'Optimal'
-                            ? 'bg-green-900 text-green-300'
-                            : process.status === 'Warning'
-                            ? 'bg-yellow-900 text-yellow-300'
-                            : 'bg-red-900 text-red-300'
-                        }`}
-                      >
-                        {process.status}
-                      </span>
-                    </td>
-                    <td className="px-4 py-2 text-slate-300">{process.co2Emissions}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div className="mt-4 p-4 bg-slate-700 rounded-lg border border-slate-600 text-center">
-            <p className="text-slate-300 text-sm">
-              Showing 5 of {processDataFile.processes.length} processes.{' '}
-              <span className="text-blue-400 font-semibold">Go to Process Data page to see all data and export as CSV.</span>
-            </p>
           </div>
         </div>
       </div>
